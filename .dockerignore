@@ -1,0 +1,11 @@
+*.md
+*.env
+.git
+.gitignore
+.github
+.drone.yml
+.travis.yml
+docker-compose.yml
+Dockerfile
+.dockerignore
+screenshots

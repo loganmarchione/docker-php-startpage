@@ -1,0 +1,7 @@
+{
+    "require": {
+        "simple-icons/simple-icons": "6.17.0",
+        "fortawesome/font-awesome": "6.1.1",
+        "twbs/bootstrap": "5.1.3"
+    }
+}
