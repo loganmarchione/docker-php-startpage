@@ -65,7 +65,6 @@ function URL_check(string $url)
 
     <link href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./vendor/fortawesome/font-awesome/css/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="<?php echo $favicon; ?>">
     <style>
     .logotype {
       height: 1.25em;
@@ -132,6 +131,7 @@ function URL_check(string $url)
       include("user_includes/style.css");
     } ?>
 
+    <link rel="shortcut icon" href="<?php echo $favicon; ?>">
     <title><?php echo $page_title; ?></title>
   </head>
   <body>
