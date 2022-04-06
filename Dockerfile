@@ -1,12 +1,3 @@
-ARG BUILD_DATE
-
-LABEL \
-  maintainer="Logan Marchione <logan@loganmarchione.com>" \
-  org.opencontainers.image.authors="Logan Marchione <logan@loganmarchione.com>" \
-  org.opencontainers.image.title="docker-php-startpage" \
-  org.opencontainers.image.description="Runs a PHP-based startpage in Docker" \
-  org.opencontainers.image.created=$BUILD_DATE
-
 FROM composer:2 AS builder
 WORKDIR /app/
 COPY composer.* ./
@@ -20,6 +11,15 @@ RUN composer install \
     --no-progress
 
 FROM php:8-apache-bullseye
+
+ARG BUILD_DATE
+
+LABEL \
+  maintainer="Logan Marchione <logan@loganmarchione.com>" \
+  org.opencontainers.image.authors="Logan Marchione <logan@loganmarchione.com>" \
+  org.opencontainers.image.title="docker-php-startpage" \
+  org.opencontainers.image.description="Runs a PHP-based startpage in Docker" \
+  org.opencontainers.image.created=$BUILD_DATE
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     netcat && \
