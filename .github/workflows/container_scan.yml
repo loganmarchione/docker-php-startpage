@@ -34,6 +34,7 @@ jobs:
         tags: |
           ${{ env.USER }}/${{ env.REPO }}:${{ env.VERSION }}
           ${{ env.USER }}/${{ env.REPO }}:latest
+
     - name: Container scan
       uses: azure/container-scan@v0
       with:
