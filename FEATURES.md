@@ -4,11 +4,8 @@
 - Custom footer
 - Custom CSS
 - HTTP status checks
-- Mobile-friendly:
-  - Uses [Bootstrap](https://getbootstrap.com/) CSS/JS
-- Icon packs:
-  - [Font Awesome Free](https://fontawesome.com/) (better for glyphs and symbols)
-  - [Simple Icons](https://simpleicons.org/) (better for brands)
+- Mobile-friendly
+- Icon packs
 
 ## Custom configuration files
 The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (they must match exactly).
@@ -119,7 +116,7 @@ When `"stat": false`, the check is skipped and a `Gray X` is displayed.
 
 ## Mobile-friendly
 
-Bootstrap is delivered inside the container image. This makes the image larger, but means that Bootstrap is not loaded from an external third-party CDN.
+[Bootstrap](https://getbootstrap.com/) is delivered inside the container image. This makes the image larger, but means that Bootstrap is not loaded from an external third-party CDN.
 
 I am not a web developer, so using Bootstrap ensures that the page works well on desktop and mobile, as well as having a familiar look and feel (e.g., navbar, hamburger menu on mobile, footer, etc...).
 
@@ -127,4 +124,4 @@ I am not a web developer, so using Bootstrap ensures that the page works well on
 
 ## Icon packs
 
-Icons are delivered inside the container image. This makes the image larger, but means that icons are not loaded from an external third-party CDN. In addition, this also gives the benefit of being able to swap Font Awesome and Simple Icons in the `config.json` file by changing the path to the SVG files.
+Icons from [Font Awesome (free)](https://fontawesome.com/) and [Simple Icons](https://simpleicons.org/) are delivered inside the container image. This makes the image larger, but means that icons are not loaded from an external third-party CDN. In addition, this also gives the benefit of being able to swap Font Awesome and Simple Icons in the `config.json` file by changing the path to the SVG files.
