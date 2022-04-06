@@ -1,42 +1,57 @@
 <?php
+// This is probably the worst PHP you'll ever read in your life
 
-//Read the config.php file
-include 'config/config.php';
+// Check if a user config.json file exists, otherwise use the sample file
+if (file_exists("user_includes/config.json")) {
+  $json = file_get_contents("user_includes/config.json");
+} else {
+  $json = file_get_contents("sample.json");
+}
 
-// Read the JSON file 
-$json = file_get_contents("config.json");
+// Decode the JSON
 $json_data = json_decode($json,true);
 
 // Set some variables to use later
-$page_title = $json_data["page_title"];
-$navbar_title_image = $json_data["navbar_title_image"];
-$navbar_title = $json_data["navbar_title"];
-$favicon = $json_data["favicon"];
+$page_title =             $json_data["page_title"];
+$navbar_title_image =     $json_data["navbar_title_image"];
+$navbar_title =           $json_data["navbar_title"];
+$favicon =                $json_data["favicon"];
 
-// Function to check if a URL is OK
+// Function to check URL HTTP status
 function URL_check(string $url)
 {
-  // Make HEAD requests instead of GET requets, since HEAD is smaller
+  // Set some defaults
   stream_context_set_default(
     array(
-        'http' => array(
-            'method' => 'HEAD'
-        )
+      'http' => array(
+        'max_redirects'=>5,
+        'timeout' => 5,
+        'method' => 'GET'   // Used GET instead of HEAD because some apps don't like HEAD requests
+      )
     )
   );
 
-  // Array containing the online/offline font glyphs
-  $status = array("<span class=\"online\"><i class=\"fas fa-check-circle\"></i></span>", "<span class=\"offline\"><i class=\"fas fa-times-circle\"></i></span>");
-  
+  // Array containing the various status glyphs
+  $status = array(
+    "<span class=\"auth\"><i class=\"fas fa-lock\"></i></span>",
+    "<span class=\"error\"><i class=\"fas fa-circle-exclamation\"></i></span>",
+    "<span class=\"online\"><i class=\"fas fa-circle-check\"></i></span>",
+    "<span class=\"offline\"><i class=\"fas fa-circle-xmark\"></i></span>"
+  );
+
+  // Get the headers and 3-digit status code
   $headers = get_headers($url);
+  $status_code = substr($headers[0], 9, 3 );
   
   // If haystack contains needle(s)
-  if (strpos($headers[0], "401") || strpos($headers[0], "404") !== false) {
-    // Return offline
-    return $status[1];
-  } else {
-    // Return online
+  if (strpos($headers[0], "401") !== false) {
     return $status[0];
+  } elseif ($status_code >= 400 && $status_code <= 499) {
+    return $status[1];
+  } elseif ($status_code >= 200 && $status_code <= 399) {
+    return $status[2];
+  } else {
+    return $status[3];
   }
 }
 
@@ -51,15 +66,19 @@ function URL_check(string $url)
     <link href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./vendor/fortawesome/font-awesome/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo $favicon; ?>">
-
-    <!--extra CSS-->
     <style>
-    body {
-      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
-    }
     .logotype {
       height: 1.25em;
       vertical-align: text-top;
+    }
+    .error {
+      height: 1.25em;
+      padding: 2px 5px 2px 5px;
+      margin: 0;
+      display: inline;
+      color: orange;
+      font-family: inherit;
+      border-radius: 4px;
     }
     .online {
       height: 1.25em;
@@ -79,6 +98,24 @@ function URL_check(string $url)
       font-family: inherit;
       border-radius: 4px;
     }
+    .auth {
+        height: 1.25em;
+        padding: 2px 5px 2px 5px;
+        margin: 0;
+        display: inline;
+        color: orange;
+        font-family: inherit;
+        border-radius: 4px;
+    }
+    .unknown {
+        height: 1.25em;
+        padding: 2px 5px 2px 5px;
+        margin: 0;
+        display: inline;
+        color: gray;
+        font-family: inherit;
+        border-radius: 4px;
+    }
     .table {
       background-color: white;
     }
@@ -87,14 +124,18 @@ function URL_check(string $url)
       border: inherit;
     }
     .table td {
-      white-space: nowrap;      /* So table wont' wrap (i.e., I want them to scroll on mobile) */
+      white-space: nowrap;      /* So table won't wrap (i.e., I want them to scroll horizontally on mobile) */
     }
     </style>
+
+    <?php if (file_exists("user_includes/style.css")) {
+      include("user_includes/style.css");
+    } ?>
 
     <title><?php echo $page_title; ?></title>
   </head>
   <body>
-
+  <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
@@ -106,10 +147,12 @@ function URL_check(string $url)
             <li class="nav-item">
             <a class="nav-link" href="#" onclick="window.location.reload(true);"><i class="fas fa-sync fa-spin"></i> Reload</a>
             </li>
+            <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
         </ul>
         </div>
     </div>
     </nav>
+    </header>
 
     <div class="container">
         <div class="row">
@@ -150,6 +193,9 @@ function URL_check(string $url)
             if ($service_stat) {
               echo URL_check($service_href);
             }
+            else {
+              echo "<span class=\"unknown\"><i class=\"fas fa-circle-xmark\"></i></span>";
+            }
             echo "</td>
             <td>$service_misc</td>
             </tr>";
@@ -163,8 +209,13 @@ function URL_check(string $url)
         } // close foreach
 ?>
 
-        </div>
-    </div>
+        </div><!--end row-->
+    </div><!--end container-->
+
+    <?php if (file_exists("user_includes/footer.php")) {
+      include("user_includes/footer.php");
+    } ?>
+
     <script src="./vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
