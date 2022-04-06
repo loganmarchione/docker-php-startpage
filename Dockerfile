@@ -1,3 +1,12 @@
+ARG BUILD_DATE
+
+LABEL \
+  maintainer="Logan Marchione <logan@loganmarchione.com>" \
+  org.opencontainers.image.authors="Logan Marchione <logan@loganmarchione.com>" \
+  org.opencontainers.image.title="docker-php-startpage" \
+  org.opencontainers.image.description="Runs a PHP-based startpage in Docker" \
+  org.opencontainers.image.created=$BUILD_DATE
+
 FROM composer:2 as builder
 WORKDIR /app/
 COPY composer.* ./
