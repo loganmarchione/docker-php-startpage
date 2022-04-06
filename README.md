@@ -10,6 +10,8 @@ Runs a PHP-based startpage in Docker
   - Init system: N/A
   - Application: N/A
 
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop.png)
+
 ## Explanation
 
   - Runs a PHP-based startpage in Docker.
