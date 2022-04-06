@@ -12,14 +12,14 @@ Runs a PHP-based startpage in Docker
 
 ## Explanation
 
-  - Runs a Nginx WebDav server in Docker.
-  - Exposes two WebDav locations
-    - `/public` - No authentication
-    - `/restricted` - Authentication if specified (see below)
+  - Runs a PHP-based startpage in Docker.
+  - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information
 
 ## Requirements
 
   - Everything is PHP (server-side), so the Docker container running this image will need to be able to reach URLs to do a status check.
+  - The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files.
+
 ## Docker image information
 
 ### Docker image tags
