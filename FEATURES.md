@@ -18,6 +18,7 @@ header_links.php
 footer.php
 style.css
 ```
+⚠️ Anything inside `/var/www/html/user_includes` can be served by Apache. Don't put anything contain usernames/passwords/etc... in this directory. ⚠️
 
 ## JSON-based configuration file
 The configuration file (`config.json`) has two sections:
