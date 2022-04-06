@@ -1,0 +1,4 @@
+
+general:
+  vulnerabilities:
+    - CVE-2021-22945  # https://security-tracker.debian.org/tracker/CVE-2021-22945
