@@ -7,7 +7,7 @@ LABEL \
   org.opencontainers.image.description="Runs a PHP-based startpage in Docker" \
   org.opencontainers.image.created=$BUILD_DATE
 
-FROM composer:2 as builder
+FROM composer:2 AS builder
 WORKDIR /app/
 COPY composer.* ./
 RUN composer install \
