@@ -1,0 +1,161 @@
+{   
+    "page_title":           "Dashboard",
+    "navbar_title_image":   "#TODO",
+    "navbar_title":         "1234 USA Street",
+    "favicon":              "./vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg",
+    "Groups": {
+        "Web": {
+            "200test": {
+                "name": "200 Test page",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "201test": {
+                "name": "201 Test page",
+                "href": "https://httpstat.us/201",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "202test": {
+                "name": "202 Test page",
+                "href": "https://httpstat.us/202",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "401test": {
+                "name": "401 Test page",
+                "href": "https://httpstat.us/401",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "403test": {
+                "name": "403 Test page",
+                "href": "https://httpstat.us/403",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "404test": {
+                "name": "404 Test page",
+                "href": "https://httpstat.us/404",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "500test": {
+                "name": "500 Test page",
+                "href": "https://httpstat.us/500",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            }
+        },
+        "Home": {
+            "200test": {
+                "name": "200 Test page",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "201test": {
+                "name": "201 Test page",
+                "href": "https://httpstat.us/201",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "202test": {
+                "name": "202 Test page",
+                "href": "https://httpstat.us/202",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "401test": {
+                "name": "401 Test page",
+                "href": "https://httpstat.us/401",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "403test": {
+                "name": "403 Test page",
+                "href": "https://httpstat.us/403",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "404test": {
+                "name": "404 Test page",
+                "href": "https://httpstat.us/404",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "500test": {
+                "name": "500 Test page",
+                "href": "https://httpstat.us/500",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            }
+        },
+        "Applications": {
+            "200test": {
+                "name": "200 Test page",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "201test": {
+                "name": "201 Test page",
+                "href": "https://httpstat.us/201",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "202test": {
+                "name": "202 Test page",
+                "href": "https://httpstat.us/202",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "401test": {
+                "name": "401 Test page",
+                "href": "https://httpstat.us/401",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "403test": {
+                "name": "403 Test page",
+                "href": "https://httpstat.us/403",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "404test": {
+                "name": "404 Test page",
+                "href": "https://httpstat.us/404",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "500test": {
+                "name": "500 Test page",
+                "href": "https://httpstat.us/500",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            }
+        }
+    }
+}

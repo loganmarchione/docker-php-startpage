@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY --from=builder /app/vendor /var/www/html/vendor
 
-COPY config.json /var/www/html/config.json
+COPY sample.json /var/www/html/sample.json
 
 COPY index.php /var/www/html/index.php
 
