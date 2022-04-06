@@ -27,6 +27,10 @@ function URL_check(string $url)
         'max_redirects'=>5,
         'timeout' => 5,
         'method' => 'GET'   // Used GET instead of HEAD because some apps don't like HEAD requests
+      ),
+      'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
       )
     )
   );
