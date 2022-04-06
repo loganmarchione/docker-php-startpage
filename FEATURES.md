@@ -123,6 +123,8 @@ Bootstrap is delivered inside the container image. This makes the image larger, 
 
 I am not a web developer, so using Bootstrap ensures that the page works well on desktop and mobile, as well as having a familiar look and feel (e.g., navbar, hamburger menu on mobile, footer, etc...).
 
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile.png)
+
 ## Icon packs
 
 Icons are delivered inside the container image. This makes the image larger, but means that icons are not loaded from an external third-party CDN. In addition, this also gives the benefit of being able to swap Font Awesome and Simple Icons in the `config.json` file by changing the path to the SVG files.
