@@ -15,7 +15,7 @@ Runs a PHP-based startpage in Docker
 ## Explanation
 
   - Runs a PHP-based startpage in Docker.
-  - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information
+  - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information.
 
 ## Requirements
 
