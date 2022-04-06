@@ -46,25 +46,22 @@ Below is an example docker-compose.yml file.
 ```
 version: '3'
 services:
-  webdav:
-    container_name: webdav
+  startpage:
+    container_name: startpage
     restart: unless-stopped
-    environment:
-      - WEBDAV_USER=user
-      - WEBDAV_PASS=password1
     networks:
-      - webdav
+      - startpage
     ports:
-      - '8888:80'
+      - '80:80'
     volumes:
-      - 'webdav:/var/www/webdav'
-    image: loganmarchione/docker-webdav-nginx:latest
+      - 'user_includes:/var/www/html/user_includes'
+    image: loganmarchione/docker-php-startpage:latest
 
 networks:
-  webdav:
+  startpage:
 
 volumes:
-  webdav:
+  user_includes:
     driver: local
 ```
 
