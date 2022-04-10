@@ -134,10 +134,6 @@ function URL_check(string $url)
     } ?>
     </style>
 
-    <?php if (file_exists("user_includes/style.css")) {
-      include("user_includes/style.css");
-    } ?>
-
     <link rel="shortcut icon" href="<?php echo $favicon; ?>">
     <title><?php echo $page_title; ?></title>
   </head>
