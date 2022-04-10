@@ -1,0 +1,34 @@
+body {
+    background-color: #212529;
+    color: #f3f2f1;
+}
+caption {
+    color: #f3f2f1;
+}
+.table {
+    background-color: #212529;
+    color: #f3f2f1;
+}
+.table a:hover {
+    text-decoration: dotted;
+}
+.table a,
+.table a:link,
+.table a:visited,
+.table a:hover,
+.table a:active {
+    color: rgb(13, 173, 120);
+}
+.table {
+    --bs-table-hover-color: #f3f2f1;
+    --bs-table-hover-bg: #3b3f43;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    color: #f3f2f1;
+}
+.table-striped>tbody>tr:nth-of-type(even)>* {
+    background-color: #54585C;
+}
+.logotype {
+    filter: invert(99%) sepia(4%) saturate(516%) hue-rotate(295deg) brightness(115%) contrast(90%);
+}
