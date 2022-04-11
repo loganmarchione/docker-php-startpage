@@ -82,3 +82,4 @@ php -S localhost:8000
 - [ ] Change `config.json` to `config.php`, since PHP allows setting default variables and comments
 - [ ] Investigate using `curl` instead of `get_headers` (`curl` might be faster?)
 - [ ] Add a try/except to the `get_headers` call
+- [ ] Run on ARM or ARM64 devices
