@@ -1,13 +1,19 @@
 body {
-    background-color: #212529;
-    color: #f3f2f1;
+    --dark-color: #212529;
+    --light-color: #f3f2f1;
+    --link-color: #0DAD78;
+    --row-hover-color: #3b3f43;
+    --row-color-even: #54585C;
+    --logo-color: invert(99%) sepia(4%) saturate(516%) hue-rotate(295deg) brightness(115%) contrast(90%);
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 caption {
-    color: #f3f2f1;
+    color: var(--light-color);
 }
 .table {
-    background-color: #212529;
-    color: #f3f2f1;
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
 .table a:hover {
     text-decoration: dotted;
@@ -17,18 +23,18 @@ caption {
 .table a:visited,
 .table a:hover,
 .table a:active {
-    color: rgb(13, 173, 120);
+    color: var(--link-color);
 }
 .table {
-    --bs-table-hover-color: #f3f2f1;
-    --bs-table-hover-bg: #3b3f43;
+    --bs-table-hover-color: var(--light-color);
+    --bs-table-hover-bg: var(--row-hover-color);
 }
 .table-striped>tbody>tr:nth-of-type(odd)>* {
-    color: #f3f2f1;
+    color: var(--light-color);
 }
 .table-striped>tbody>tr:nth-of-type(even)>* {
-    background-color: #54585C;
+    background-color: var(--row-color-even);
 }
 .logotype {
-    filter: invert(99%) sepia(4%) saturate(516%) hue-rotate(295deg) brightness(115%) contrast(90%);
+    filter: var(--logo-color);
 }
