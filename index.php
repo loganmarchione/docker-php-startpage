@@ -129,11 +129,10 @@ function URL_check(string $url)
     .table td {
       white-space: nowrap;      /* So table won't wrap (i.e., I want them to scroll horizontally on mobile) */
     }
-    </style>
-
     <?php if (file_exists("user_includes/style.css")) {
       include("user_includes/style.css");
     } ?>
+    </style>
 
     <link rel="shortcut icon" href="<?php echo $favicon; ?>">
     <title><?php echo $page_title; ?></title>
