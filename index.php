@@ -119,6 +119,10 @@ function URL_check(string $url)
         font-family: inherit;
         border-radius: 4px;
     }
+    .header-centered {
+    position: relative;
+    margin: 0 auto; 
+}
     .table {
       background-color: white;
     }
@@ -145,6 +149,11 @@ function URL_check(string $url)
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="container">
+          <div class="header-centered">
+            <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
+          </div>
+        </div>
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <li class="nav-item">
