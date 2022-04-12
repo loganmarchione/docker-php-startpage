@@ -14,7 +14,7 @@
 The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (they must match exactly).
 ```
 config.json
-header-center.php
+header_center.php
 header_links.php
 footer.php
 style.css
@@ -72,7 +72,7 @@ Below is the layout of the group/service options, with some notes.
 ## Custom user includes
 
 ## Custom centered zone in navbar
-The file `header-center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). Populate it as needed.
+The file `header_center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). Populate it as needed.
 
 ## Custom links in navbar
 The `header_links.php` file contains the HTML used to add extra links to the navbar. Populate it as needed.
