@@ -66,6 +66,9 @@ Below is the layout of the group/service options, with some notes.
     ...   
 ```
 
+## Custom centered zone in navbar
+The file `header-center.php` contains the HTML used to add extra info to the navbar, e.g., a custom search engine. Populate it as needed.
+
 ## Custom links in navbar
 This file contains the HTML used to add extra links to the navbar. Populate it as needed.
 ```
