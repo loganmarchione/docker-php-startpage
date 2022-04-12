@@ -1,8 +1,11 @@
 # Features
 - JSON-based configuration file
-- Custom links in navbar
-- Custom footer
-- Custom CSS
+  - Global configuration options
+  - Group/service configuration options
+- Custom user includes
+  - Custom links in navbar
+  - Custom footer
+  - Custom CSS
 - HTTP status checks
 - Mobile-friendly
 - Icon packs
@@ -11,6 +14,7 @@
 The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (they must match exactly).
 ```
 config.json
+header-center.php
 header_links.php
 footer.php
 style.css
@@ -37,7 +41,7 @@ Below is the layout of the global options, with some notes.
 }
 ```
 
-### Group/service config
+### Group/service configuration options
 Below is the layout of the group/service options, with some notes.
 ```
     ...
@@ -65,12 +69,13 @@ Below is the layout of the group/service options, with some notes.
     ...
     ...   
 ```
+## Custom user includes
 
 ## Custom centered zone in navbar
-The file `header-center.php` contains the HTML used to add extra info to the navbar, e.g., a custom search engine. Populate it as needed.
+The file `header-center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). Populate it as needed.
 
 ## Custom links in navbar
-This file contains the HTML used to add extra links to the navbar. Populate it as needed.
+The `header_links.php` file contains the HTML used to add extra links to the navbar. Populate it as needed.
 ```
 <li class="nav-item">
   <a class="nav-link" href="#" target="_blank"><i class="fas fa-sitemap"></i> Google.com</a>
@@ -78,7 +83,7 @@ This file contains the HTML used to add extra links to the navbar. Populate it a
 ```
 
 ## Custom footer
-This file contains the HTML used in the footer. Populate it as needed.
+The file `footer.php` contains the HTML used in the footer. Populate it as needed.
 ```
 <div class="container">
   <footer class="py-3 my-4">
