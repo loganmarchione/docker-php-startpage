@@ -119,10 +119,6 @@ function URL_check(string $url)
         font-family: inherit;
         border-radius: 4px;
     }
-    .header-centered {
-    position: relative;
-    margin: 0 auto; 
-}
     .table {
       background-color: white;
     }
@@ -142,86 +138,86 @@ function URL_check(string $url)
     <title><?php echo $page_title; ?></title>
   </head>
   <body>
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="container">
-          <div class="header-centered">
-            <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
-          </div>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+              <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="mx-auto order-0">
+              <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="window.location.reload(true);"><i class="fas fa-sync fa-spin"></i> Reload</a>
+                  </li>
+                  <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
+                </ul>
+            </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-            <li class="nav-item">
-            <a class="nav-link" href="#" onclick="window.location.reload(true);"><i class="fas fa-sync fa-spin"></i> Reload</a>
-            </li>
-            <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
-        </ul>
-        </div>
-    </div>
-    </nav>
+      </nav>
     </header>
 
     <div class="container">
-        <div class="row">
+      <div class="row">
 
-<?php
-        // Only get JSON under the Groups key
-        $array = $json_data["Groups"];
+        <?php
+          // Only get JSON under the Groups key
+          $array = $json_data["Groups"];
 
-        // For each sub-key under Groups
-        foreach($array as $group => $group_array){
-        echo "
-        <div class=\"col\">
-        <div class=\"table-responsive-sm\">
-        <table class=\"table table-hover table-striped caption-top\">
-        <caption>$group</caption>
-        <thead>
-            <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Misc.</th>
-            </tr>
-        </thead>
-        <tbody>";
+          // For each sub-key under Groups
+          foreach($array as $group => $group_array){
+          echo "
+          <div class=\"col\">
+          <div class=\"table-responsive-sm\">
+          <table class=\"table table-hover table-striped caption-top\">
+          <caption>$group</caption>
+          <thead>
+              <tr>
+              <th>Name</th>
+              <th>Status</th>
+              <th>Misc.</th>
+              </tr>
+          </thead>
+          <tbody>";
 
-        // For each service in the group
-        foreach($group_array as $service => $service_array) {
-            $service_name = $service_array["name"];
-            $service_href = $service_array["href"];
-            $service_icon = $service_array["icon"];
-            $service_stat = $service_array["stat"];
-            $service_misc = $service_array["misc"];
+          // For each service in the group
+          foreach($group_array as $service => $service_array) {
+              $service_name = $service_array["name"];
+              $service_href = $service_array["href"];
+              $service_icon = $service_array["icon"];
+              $service_stat = $service_array["stat"];
+              $service_misc = $service_array["misc"];
 
-            echo "
-            <tr>
-            <td><img class=\"logotype\" src=\"$service_icon\"> <a href=\"$service_href\" target=\"_blank\">$service_name</a></td>
-            <td>";
-            // If $service_stat is set to true, perform the check
-            if ($service_stat) {
-              echo URL_check($service_href);
-            }
-            else {
-              echo "<span class=\"unknown\"><i class=\"fas fa-circle-xmark\"></i></span>";
-            }
-            echo "</td>
-            <td>$service_misc</td>
-            </tr>";
-        } // close foreach
+          echo "
+          <tr>
+          <td><img class=\"logotype\" src=\"$service_icon\"> <a href=\"$service_href\" target=\"_blank\">$service_name</a></td>
+          <td>";
+          // If $service_stat is set to true, perform the check
+          if ($service_stat) {
+            echo URL_check($service_href);
+          }
+          else {
+            echo "<span class=\"unknown\"><i class=\"fas fa-circle-xmark\"></i></span>";
+          }
+          echo "</td>
+          <td>$service_misc</td>
+          </tr>";
+          } // close foreach
 
-        echo "
-        </tbody>
-        </table>
-        </div>
-        </div>";
-        } // close foreach
-?>
+          echo "
+          </tbody>
+          </table>
+          </div>
+          </div>";
+          } // close foreach
+        ?>
 
-        </div><!--end row-->
+      </div><!--end row-->
     </div><!--end container-->
 
     <?php if (file_exists("user_includes/footer.php")) {
