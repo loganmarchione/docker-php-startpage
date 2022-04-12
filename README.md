@@ -73,10 +73,6 @@ composer update
 php -S localhost:8000
 ```
 
-##DarkMode
-If you want to activate darkmode you can copy style.css from the darkmode folder to your "user_includes" folder
-![Screenshot](https://raw.githubusercontent.com/dragonheart69/docker-php-startpage/darkmode/screenshots/darkmode_desktop.png)
-
 ## TODO
 - [ ] Learn PHP
 - [x] Add a [healthcheck](https://docs.docker.com/engine/reference/builder/#healthcheck)
