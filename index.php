@@ -114,6 +114,7 @@ function URL_check(string $url)
     .table td {
       white-space: nowrap;      /* So table won't wrap (i.e., I want them to scroll horizontally on mobile) */
     }
+    /* user_includes/style.css comes right after this */
     <?php if (file_exists("user_includes/style.css")) { include("user_includes/style.css"); } ?>
 
     </style>
@@ -125,25 +126,22 @@ function URL_check(string $url)
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
         <div class="container-fluid">
-          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-            <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-          <div class="mx-auto order-0">
-            <!--user_includes/header_center.php comes right after this-->
-            <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
-          </div>
-          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ms-auto">
+          <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+              <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
+            </ul>
+            <ul class="navbar-nav ms-0 mb-2 mb-md-0">
+              <!--user_includes/header_links.php comes right after this-->
+              <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
               <li class="nav-item">
                 <a class="nav-link" href="#" onclick="window.location.reload(true);"><i class="fas fa-sync fa-spin"></i> Reload</a>
               </li>
-              <!--user_includes/header_links.php comes right after this-->
-              <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
             </ul>
-          </div>
+          </div><!--end collapse-->
         </div><!--end container-->
       </nav>
     </header>
