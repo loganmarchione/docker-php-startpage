@@ -118,7 +118,7 @@ body {
 }
 ```
 In the `darkmode` folder you will find a `style.css` file. You can easily place this in your `/var/www/html/user_includes` folder. Colors can be changed at the top of the CSS.
-![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/darkmode_desktop.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_dark.png)
 
 ## HTTP status checks
 
