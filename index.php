@@ -37,10 +37,10 @@ function URL_check(string $url)
 
   // Array containing the various status glyphs
   $status = array(
-    "<span class=\"auth\"><i class=\"fas fa-lock\"></i></span>",
-    "<span class=\"error\"><i class=\"fas fa-circle-exclamation\"></i></span>",
-    "<span class=\"online\"><i class=\"fas fa-circle-check\"></i></span>",
-    "<span class=\"offline\"><i class=\"fas fa-circle-xmark\"></i></span>"
+    "<span class=\"glyph-auth\"><i class=\"fas fa-lock\"></i></span>",
+    "<span class=\"glyph-error\"><i class=\"fas fa-circle-exclamation\"></i></span>",
+    "<span class=\"glyph-online\"><i class=\"fas fa-circle-check\"></i></span>",
+    "<span class=\"glyph-offline\"><i class=\"fas fa-circle-xmark\"></i></span>"
   );
 
   // Get the headers and 3-digit status code
@@ -74,35 +74,25 @@ function URL_check(string $url)
       height: 1.25em;
       vertical-align: text-top;
     }
-    .error {
-      height: 1.25em;
+    .glyph-error {
       display: inline;
       color: orange;
-      font-family: inherit;
     }
-    .online {
-      height: 1.25em;
+    .glyph-online {
       display: inline;
       color: green;
-      font-family: inherit;
     }
-    .offline { 
-      height: 1.25em;
+    .glyph-offline {
       display: inline;
       color: red;
-      font-family: inherit;
     }
-    .auth {
-      height: 1.25em;
+    .glyph-auth {
       display: inline;
       color: orange;
-      font-family: inherit;
     }
-    .unknown {
-      height: 1.25em;
+    .glyph-unknown {
       display: inline;
       color: gray;
-      font-family: inherit;
     }
     .table {
       background-color: white;
@@ -111,8 +101,9 @@ function URL_check(string $url)
       font-size: 150%;
       border: inherit;
     }
+    /* So table won't wrap (i.e., I want them to scroll horizontally on mobile) */
     .table td {
-      white-space: nowrap;      /* So table won't wrap (i.e., I want them to scroll horizontally on mobile) */
+      white-space: nowrap;
     }
     /* user_includes/style.css comes right after this */
     <?php if (file_exists("user_includes/style.css")) { include("user_includes/style.css"); } ?>
@@ -132,6 +123,7 @@ function URL_check(string $url)
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+              <!--user_includes/header_center.php comes right after this-->
               <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
             </ul>
             <ul class="navbar-nav ms-0 mb-2 mb-md-0">
@@ -187,7 +179,7 @@ function URL_check(string $url)
           echo URL_check($service_href);
         }
         else {
-          echo "<span class=\"unknown\"><i class=\"fas fa-circle-xmark\"></i></span>";
+          echo "<span class=\"glyph-unknown\"><i class=\"fas fa-circle-xmark\"></i></span>";
         }
         echo "</td>
                   <td>$service_misc</td>
@@ -207,6 +199,7 @@ function URL_check(string $url)
     </div><!--end container-->
     <!--user_includes/footer.php comes right after this-->
     <?php if (file_exists("user_includes/footer.php")) { include("user_includes/footer.php"); } ?>
+
     <script src="./vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
