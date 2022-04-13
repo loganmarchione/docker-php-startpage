@@ -89,7 +89,7 @@ The file `header_center.php` contains the HTML used to add extra info to the nav
 The `header_links.php` file contains the HTML used to add extra links to the navbar. This content will be on on the right-side of the navbar. Populate it as needed.
 ```
 <li class="nav-item">
-  <a class="nav-link" href="#" target="_blank"><i class="fas fa-sitemap"></i> Google.com</a>
+  <a class="nav-link" href="#" target="_blank"><i class="fas fa-sitemap"></i> Network Map</a>
 </li>
 ```
 
