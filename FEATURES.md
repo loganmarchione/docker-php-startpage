@@ -1,33 +1,36 @@
 # Features
-- JSON-based configuration file
-  - Global configuration options
-  - Group/service configuration options
-- Custom user includes
-  - Custom links in navbar
-  - Custom footer
-  - Custom CSS
+- Custom configuration files
+  - JSON-based configuration file
+    - Global configuration options
+    - Group/service configuration options
+  - Custom user includes
+    - Custom centered zone in navbar
+    - Custom links in navbar
+    - Custom footer
+    - Custom CSS
 - HTTP status checks
 - Mobile-friendly
 - Icon packs
 
 ## Custom configuration files
-The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (they must match exactly).
+The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (the filenames must be spelled exactly like below).
 ```
-config.json
-header_center.php
-header_links.php
-footer.php
-style.css
+user_includes
+├── config.json
+├── footer.php
+├── header_center.php
+├── header_links.php
+└── style.css
 ```
 ⚠️ Anything inside `/var/www/html/user_includes` can be served by Apache. Don't put anything containing usernames/passwords/etc... in this directory. ⚠️
 
-## JSON-based configuration file
+### JSON-based configuration file
 The configuration file (`config.json`) has two sections:
 
 1. Global configuration options
-1. Groups (this a an array which contains services, which itself is another array)
+1. Groups (this a an array which contains another array of services)
 
-### Global configuration options
+#### Global configuration options
 Below is the layout of the global options, with some notes.
 ```
 {
@@ -41,7 +44,7 @@ Below is the layout of the global options, with some notes.
 }
 ```
 
-### Group/service configuration options
+#### Group/service configuration options
 Below is the layout of the group/service options, with some notes.
 ```
     ...
@@ -69,20 +72,28 @@ Below is the layout of the group/service options, with some notes.
     ...
     ...   
 ```
-## Custom user includes
+### Custom user includes
 
-## Custom centered zone in navbar
-The file `header_center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). Populate it as needed.
+#### Custom centered zone in navbar
+The file `header_center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). This content will be centered in the navbar. Populate it as needed.
+```
+<li class="nav-item">
+  <form id="form"> 
+    <input type="search" id="query" name="q" placeholder="Search...">
+    <button>Search</button>
+  </form>
+</li>>
+```
 
-## Custom links in navbar
-The `header_links.php` file contains the HTML used to add extra links to the navbar. Populate it as needed.
+#### Custom links in navbar
+The `header_links.php` file contains the HTML used to add extra links to the navbar. This content will be on on the right-side of the navbar. Populate it as needed.
 ```
 <li class="nav-item">
   <a class="nav-link" href="#" target="_blank"><i class="fas fa-sitemap"></i> Google.com</a>
 </li>
 ```
 
-## Custom footer
+#### Custom footer
 The file `footer.php` contains the HTML used in the footer. Populate it as needed.
 ```
 <div class="container">
@@ -99,19 +110,37 @@ The file `footer.php` contains the HTML used in the footer. Populate it as neede
 </div><!--end container-->
 ```
 
-## Custom CSS
+#### Custom CSS
 The CSS in `style.css` is loaded after Bootstrap, Font Awesome, and the default CSS. Anything you put in here will overwrite CSS above it. Populate it as needed.
 ```
-  body {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
-  }
+body {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
+}
 ```
 In the `darkmode` folder you will find a `style.css` file. You can easily place this in your `/var/www/html/user_includes` folder. Colors can be changed at the top of the CSS.
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/darkmode_desktop.png)
 
 ## HTTP status checks
 
-When `"stat": true`, PHP will use `get_headers` to perform a quick check of the HTTP status code of the supplied `href`. Based on the status code returned, it will display the following icons.
+In the `config.json file`, when `"stat": true`, PHP will use `get_headers` to perform a quick check of the HTTP status code of the supplied `href`.
+```
+    ...
+    ...
+    ...
+        "Home": {
+            "200test": {
+                "name": "200 Test page",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            }
+    ...
+    ...
+    ... 
+```
+
+Based on the status code returned, it will display the following icons.
 ```
 200 - 300       = Green check
 401             = Orange lock
