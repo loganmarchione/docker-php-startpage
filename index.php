@@ -115,26 +115,26 @@ function URL_check(string $url)
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mx-auto mb-2 mb-md-0">
-              <!--user_includes/header_center.php comes right after this-->
-              <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
-            </ul>
-            <ul class="navbar-nav ms-0 mb-2 mb-md-0">
-              <!--user_includes/header_links.php comes right after this-->
-              <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
+          <div class="w-100 order-md-0 order-0">
+            <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="mx-auto navbar-collapse collapse order-1 dual-collapse2">
+            <?php if (file_exists("user_includes/header_center.php")) { include("user_includes/header_center.php"); } ?>
+          </div>
+          <div class="navbar-collapse collapse w-100 order-2 dual-collapse2">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="#" onclick="window.location.reload(true);"><i class="fas fa-sync fa-spin"></i> Reload</a>
               </li>
+                <?php if (file_exists("user_includes/header_links.php")) { include("user_includes/header_links.php"); } ?>
             </ul>
-          </div><!--end collapse-->
-        </div><!--end container-->
+          </div>
+        </div>
       </nav>
     </header>
 
