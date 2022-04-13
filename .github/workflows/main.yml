@@ -39,7 +39,6 @@ jobs:
         context: .
         file: Dockerfile
         platforms: linux/amd64,linux/arm64,linux/arm/v7
-        load: true
         tags: |
           ${{ env.USER }}/${{ env.REPO }}:${{ env.VERSION }}
           ${{ env.USER }}/${{ env.REPO }}:latest
