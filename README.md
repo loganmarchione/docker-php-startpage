@@ -9,6 +9,7 @@ Runs a PHP-based startpage in Docker
   - Image base: [PHP](https://hub.docker.com/_/php)
   - Init system: N/A
   - Application: N/A
+  - Architecture: `linux/amd64,linux/arm64,linux/arm/v7`
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop.png)
 
@@ -82,4 +83,4 @@ php -S localhost:8000
 - [ ] Change `config.json` to `config.php`, since PHP allows setting default variables and comments
 - [ ] Investigate using `curl` instead of `get_headers` (`curl` might be faster?)
 - [ ] Add a try/except to the `get_headers` call
-- [ ] Run on ARM or ARM64 devices
+- [x] Run on ARM or ARM64 devices
