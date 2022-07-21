@@ -25,7 +25,7 @@ jobs:
     - name: Lint
       uses: docker://ghcr.io/phpstan/phpstan
       with:
-        args: analyse
+        args: analyse index.php
 
   ubuntu_ci:
     name: Build and test
