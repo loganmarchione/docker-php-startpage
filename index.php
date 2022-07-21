@@ -18,8 +18,7 @@ $navbar_title =           $json_data["navbar_title"];
 $favicon =                $json_data["favicon"];
 
 // Function to check URL HTTP status
-function URL_check(string $url)
-{
+function URL_check(string $url): string {
   // Set some defaults
   stream_context_set_default(
     array(
