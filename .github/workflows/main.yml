@@ -13,9 +13,27 @@ env:
   REPO: docker-php-startpage
 
 jobs:
+  lint:
+    name: Lint
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out the codebase
+      uses: actions/checkout@v3
+
+    - name: Lint PHP file(s)
+      uses: github/super-linter/slim@v4
+      env:
+        VALIDATE_ALL_CODEBASE: false
+        DEFAULT_BRANCH: master
+        FILTER_REGEX_INCLUDE: .*.php
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   ubuntu_ci:
     name: Build and test
 
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
