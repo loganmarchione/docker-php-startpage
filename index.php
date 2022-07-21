@@ -9,7 +9,7 @@ if (file_exists("user_includes/config.json")) {
 }
 
 // Decode the JSON
-$json_data = json_decode($json,true);
+$json_data = json_decode($json, true);
 
 // Set some variables to use later
 $page_title =             $json_data["page_title"];
