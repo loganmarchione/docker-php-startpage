@@ -18,12 +18,14 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    container:
-      image: ghcr.io/phpstan/phpstan
-      options: "analyse"
     steps:
     - name: Check out the codebase
       uses: actions/checkout@v3
+
+    - name: Lint
+      uses: docker://ghcr.io/phpstan/phpstan
+      with:
+        args: analyse
 
   ubuntu_ci:
     name: Build and test
