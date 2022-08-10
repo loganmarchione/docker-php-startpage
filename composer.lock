@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c91aa9d505cc4d631bf64d0d886f2232",
+    "content-hash": "ccac19be082181ff936205876b8701f5",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
-            "version": "6.1.1",
+            "version": "6.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "28e297f07af26f148c15e6cbbd12cea3027371d3"
+                "reference": "701d64a8943214b9767733e7ac0b201f1a08a8b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/28e297f07af26f148c15e6cbbd12cea3027371d3",
-                "reference": "28e297f07af26f148c15e6cbbd12cea3027371d3",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/701d64a8943214b9767733e7ac0b201f1a08a8b3",
+                "reference": "701d64a8943214b9767733e7ac0b201f1a08a8b3",
                 "shasum": ""
             },
             "type": "library",
@@ -49,20 +49,20 @@
                 "issues": "https://github.com/FortAwesome/Font-Awesome/issues",
                 "source": "https://github.com/FortAwesome/Font-Awesome"
             },
-            "time": "2022-03-22T15:24:29+00:00"
+            "time": "2022-07-25T17:48:16+00:00"
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "6.17.0",
+            "version": "7.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "08051345aaf8d19fe334f022d756a79f66e25359"
+                "reference": "bd614f768bfe8a002a86b985db0f06ce04c42d0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/08051345aaf8d19fe334f022d756a79f66e25359",
-                "reference": "08051345aaf8d19fe334f022d756a79f66e25359",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/bd614f768bfe8a002a86b985db0f06ce04c42d0d",
+                "reference": "bd614f768bfe8a002a86b985db0f06ce04c42d0d",
                 "shasum": ""
             },
             "type": "library",
@@ -77,8 +77,9 @@
                 "svg"
             ],
             "support": {
+                "docs": "https://github.com/simple-icons/simple-icons#php-usage-",
                 "issues": "https://github.com/simple-icons/simple-icons/issues",
-                "source": "https://github.com/simple-icons/simple-icons/tree/6.17.0"
+                "source": "https://github.com/simple-icons/simple-icons"
             },
             "funding": [
                 {
@@ -86,20 +87,20 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2022-04-03T04:53:58+00:00"
+            "time": "2022-08-07T14:46:19+00:00"
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v5.1.3",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "1a6fdfae6be09b09eaced8f0e442ca6f7680a61e"
+                "reference": "edf9c40956d19e6ab3f9151bfe0dfac6be06fa21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/1a6fdfae6be09b09eaced8f0e442ca6f7680a61e",
-                "reference": "1a6fdfae6be09b09eaced8f0e442ca6f7680a61e",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/edf9c40956d19e6ab3f9151bfe0dfac6be06fa21",
+                "reference": "edf9c40956d19e6ab3f9151bfe0dfac6be06fa21",
                 "shasum": ""
             },
             "replace": {
@@ -134,9 +135,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/bootstrap/issues",
-                "source": "https://github.com/twbs/bootstrap/tree/v5.1.3"
+                "source": "https://github.com/twbs/bootstrap/tree/5.2.0"
             },
-            "time": "2021-10-09T06:43:19+00:00"
+            "time": "2022-07-19T15:43:58+00:00"
         }
     ],
     "packages-dev": [],
