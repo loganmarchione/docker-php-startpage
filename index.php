@@ -76,6 +76,7 @@ function URL_check(string $url): string {
     }
     .navbar_title_image {
       height: 1.25em;
+      padding-right: 0.5em;
     }
     .glyph-error {
       display: inline;
