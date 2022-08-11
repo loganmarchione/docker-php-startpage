@@ -16,6 +16,7 @@ $page_title =             $json_data["page_title"];
 $navbar_title_image =     $json_data["navbar_title_image"];
 $navbar_title =           $json_data["navbar_title"];
 $favicon =                $json_data["favicon"];
+$link_target =            $json_data["link_target"];
 
 // Function to check URL HTTP status
 function URL_check(string $url): string {
@@ -171,7 +172,7 @@ function URL_check(string $url): string {
 
         echo "
                 <tr>
-                  <td><img class=\"logotype\" src=\"$service_icon\"> <a href=\"$service_href\" target=\"_blank\">$service_name</a></td>
+                  <td><img class=\"logotype\" src=\"$service_icon\"> <a href=\"$service_href\" target=\"$link_target\">$service_name</a></td>
                   <td>";
         // If $service_stat is set to true, perform the check
         if ($service_stat) {
