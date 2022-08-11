@@ -74,6 +74,9 @@ function URL_check(string $url): string {
       height: 1.25em;
       vertical-align: text-top;
     }
+    .navbar_title_image {
+      height: 1.25em;
+    }
     .glyph-error {
       display: inline;
       color: orange;
@@ -117,7 +120,7 @@ function URL_check(string $url): string {
     <header>
       <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
+          <img class="navbar_title_image" src="<?php echo $navbar_title_image; ?>"><a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

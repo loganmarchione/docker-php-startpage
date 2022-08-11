@@ -79,7 +79,7 @@ php -S localhost:8000
 - [x] Add a [healthcheck](https://docs.docker.com/engine/reference/builder/#healthcheck)
 - [ ] Make the image smaller (currently ~500MB due to `vendor` directory, maybe load resources from a CDN?)
 - [ ] Add check to make sure JSON is valid (currently, if it's not valid, nothing will load)
-- [ ] Get `navbar_title_image` config option working
+- [x] Get `navbar_title_image` config option working
 - [ ] Change `config.json` to `config.php`, since PHP allows setting default variables and comments
 - [ ] Investigate using `curl` instead of `get_headers` (`curl` might be faster?)
 - [ ] Add a try/except to the `get_headers` call

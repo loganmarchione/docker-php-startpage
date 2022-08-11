@@ -35,7 +35,7 @@ Below is the layout of the global options, with some notes.
 ```
 {
     "page_title":           "Dashboard",                                                            # sets the HTML <title> of the page
-    "navbar_title_image":   "#TODO",                                                                # sets the image in the navbar (to the left of the main navbar title)
+    "navbar_title_image":   "./vendor/fortawesome/font-awesome/svgs/solid/house.svg",               # sets the image in the navbar (to the left of the main navbar title)
     "navbar_title":         "10236 Charing Cross Road",                                             # sets the main navbar title (to the right of the navbar image)
     "favicon":              "./vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg",      # sets the HTML "favicon" (it's actually a SVG file, not an ICO file)
     "link_target":          "_self",                                                                # sets the HTML <a> target attribute (e.g., _self or _blank)

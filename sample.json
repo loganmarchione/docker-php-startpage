@@ -1,6 +1,6 @@
 {   
     "page_title":           "Dashboard",
-    "navbar_title_image":   "#TODO",
+    "navbar_title_image":   "./vendor/fortawesome/font-awesome/svgs/solid/house.svg",
     "navbar_title":         "1234 USA Street",
     "favicon":              "./vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg",
     "link_target":          "_self",
