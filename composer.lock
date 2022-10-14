@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccac19be082181ff936205876b8701f5",
+    "content-hash": "4aad38c1892f48daa0e84a2505d11382",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -91,16 +91,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "5.2.0",
+            "version": "v5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "edf9c40956d19e6ab3f9151bfe0dfac6be06fa21"
+                "reference": "961d5ff9844372a4e294980c667bbe7e0651cdeb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/edf9c40956d19e6ab3f9151bfe0dfac6be06fa21",
-                "reference": "edf9c40956d19e6ab3f9151bfe0dfac6be06fa21",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/961d5ff9844372a4e294980c667bbe7e0651cdeb",
+                "reference": "961d5ff9844372a4e294980c667bbe7e0651cdeb",
                 "shasum": ""
             },
             "replace": {
@@ -135,9 +135,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/bootstrap/issues",
-                "source": "https://github.com/twbs/bootstrap/tree/5.2.0"
+                "source": "https://github.com/twbs/bootstrap/tree/v5.2.2"
             },
-            "time": "2022-07-19T15:43:58+00:00"
+            "time": "2022-10-03T07:44:02+00:00"
         }
     ],
     "packages-dev": [],
