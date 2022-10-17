@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4aad38c1892f48daa0e84a2505d11382",
+    "content-hash": "aee014c29f697c35ea384cf36c173f1f",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
-            "version": "6.1.2",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "701d64a8943214b9767733e7ac0b201f1a08a8b3"
+                "reference": "d3a7818c253fcbafff9ebd1d4abb2866c192e1d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/701d64a8943214b9767733e7ac0b201f1a08a8b3",
-                "reference": "701d64a8943214b9767733e7ac0b201f1a08a8b3",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/d3a7818c253fcbafff9ebd1d4abb2866c192e1d7",
+                "reference": "d3a7818c253fcbafff9ebd1d4abb2866c192e1d7",
                 "shasum": ""
             },
             "type": "library",
@@ -49,7 +49,7 @@
                 "issues": "https://github.com/FortAwesome/Font-Awesome/issues",
                 "source": "https://github.com/FortAwesome/Font-Awesome"
             },
-            "time": "2022-07-25T17:48:16+00:00"
+            "time": "2022-08-31T21:02:43+00:00"
         },
         {
             "name": "simple-icons/simple-icons",
