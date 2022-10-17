@@ -4,5 +4,6 @@
     "config:base"
   ],
   "dependencyDashboard": true,
-  "dependencyDashboardTitle": "Renovate Dashboard"
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "labels": ["renovatebot"],
 }
