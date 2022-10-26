@@ -146,10 +146,13 @@ Based on the status code returned, it will display the following icons.
 200 - 300       = Green check
 401             = Orange lock
 400 - 499       = Orange exclamation
+500 - 599       = Red X
 Everything else = Red X
 ```
 
 When `"stat": false`, the check is skipped and a `Gray X` is displayed.
+
+You can hover over the status icon to see a tooltip containing the status code.
 
 ## Mobile-friendly
 

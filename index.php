@@ -35,27 +35,26 @@ function URL_check(string $url): string {
     )
   );
 
-  // Array containing the various status glyphs
-  $status = array(
-    "<span class=\"glyph-auth\"><i class=\"fas fa-lock\"></i></span>",
-    "<span class=\"glyph-error\"><i class=\"fas fa-circle-exclamation\"></i></span>",
-    "<span class=\"glyph-online\"><i class=\"fas fa-circle-check\"></i></span>",
-    "<span class=\"glyph-offline\"><i class=\"fas fa-circle-xmark\"></i></span>"
-  );
-
   // Get the headers and 3-digit status code
   $headers = get_headers($url);
   $status_code = substr($headers[0], 9, 3 );
   
-  // If haystack contains needle(s)
+  // Strings to return based on HTTP status code
+  // Special case, if $headers contains "401", display lock icon
   if (strpos($headers[0], "401") !== false) {
-    return $status[0];
+    return "<span class=\"glyph-auth\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-lock\"></i></span>";
+  // If $headers contains 4xx
   } elseif ($status_code >= 400 && $status_code <= 499) {
-    return $status[1];
+    return "<span class=\"glyph-error\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-circle-exclamation\"></i></span>";
+  // If $headers contains 5xx
+} elseif ($status_code >= 500 && $status_code <= 599) {
+  return "<span class=\"glyph-offline\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-circle-xmark\"></i></span>";
+  // If $headers contains 2xx-3xx
   } elseif ($status_code >= 200 && $status_code <= 399) {
-    return $status[2];
+    return "<span class=\"glyph-online\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-circle-check\"></i></span>";
+  // If $headers contains anything else
   } else {
-    return $status[3];
+    return "<span class=\"glyph-offline\" data-bs-toggle=\"tooltip\" data-bs-title=\"offline\"><i class=\"fas fa-circle-xmark\"></i></span>";
   }
 }
 
@@ -94,7 +93,7 @@ function URL_check(string $url): string {
       display: inline;
       color: orange;
     }
-    .glyph-unknown {
+    .glyph-disabled {
       display: inline;
       color: gray;
     }
@@ -183,7 +182,7 @@ function URL_check(string $url): string {
           echo URL_check($service_href);
         }
         else {
-          echo "<span class=\"glyph-unknown\"><i class=\"fas fa-circle-xmark\"></i></span>";
+          echo "<span class=\"glyph-disabled\" data-bs-toggle=\"tooltip\" data-bs-title=\"Status check disabled\"><i class=\"fas fa-circle-xmark\"></i></span>";
         }
         echo "</td>
                   <td>$service_misc</td>
@@ -205,5 +204,12 @@ function URL_check(string $url): string {
     <?php if (file_exists("user_includes/footer.php")) { include("user_includes/footer.php"); } ?>
 
     <script src="./vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Initialize tooltips
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+    </script>
   </body>
 </html>
