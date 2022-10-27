@@ -33,4 +33,6 @@ COPY sample.json /var/www/html/sample.json
 
 COPY index.php /var/www/html/index.php
 
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 HEALTHCHECK CMD nc -z localhost 80 || exit 1
