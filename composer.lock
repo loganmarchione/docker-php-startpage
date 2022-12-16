@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6a6b59d98944e64b730a7af5843c519",
+    "content-hash": "6eb6a6d88051224295117af9ce6aedd6",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -50,6 +50,43 @@
                 "source": "https://github.com/FortAwesome/Font-Awesome"
             },
             "time": "2022-11-15T18:34:54+00:00"
+        },
+        {
+            "name": "loganmarchione/homelab-svg-assets",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/loganmarchione/homelab-svg-assets.git",
+                "reference": "6c5041441b088af2483cd9b0f207bf4dc7125976"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/6c5041441b088af2483cd9b0f207bf4dc7125976",
+                "reference": "6c5041441b088af2483cd9b0f207bf4dc7125976",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Logan Marchione",
+                    "email": "logan@loganmarchione.com"
+                }
+            ],
+            "description": "Full-color SVG icons of homelab-related software, products, and brands",
+            "keywords": [
+                "homelab",
+                "icons",
+                "svg"
+            ],
+            "support": {
+                "issues": "https://github.com/loganmarchione/homelab-svg-assets/issues",
+                "source": "https://github.com/loganmarchione/homelab-svg-assets"
+            },
+            "time": "2022-12-16T03:32:28+00:00"
         },
         {
             "name": "simple-icons/simple-icons",
