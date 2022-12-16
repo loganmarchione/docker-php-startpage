@@ -1,16 +1,16 @@
 # Features
-- Custom configuration files
-  - JSON-based configuration file
+- [Custom configuration files](#custom-configuration-files)
+  - [JSON-based configuration file](#json-based-configuration-file)
     - Global configuration options
     - Group/service configuration options
-  - Custom user includes
+  - [Custom user includes](#custom-user-includes)
     - Custom centered zone in navbar
     - Custom links in navbar
     - Custom footer
     - Custom CSS
-- HTTP status checks
-- Mobile-friendly
-- Icon packs
+- [HTTP status checks](#http-status-checks)
+- [Mobile-friendly](#mobile-friendly)
+- [Icon packs](#icon-packs)
 
 ## Custom configuration files
 The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (the filenames must be spelled exactly like below).
@@ -164,4 +164,11 @@ I am not a web developer, so using Bootstrap ensures that the page works well on
 
 ## Icon packs
 
-Icons from [Font Awesome (free)](https://fontawesome.com/) and [Simple Icons](https://simpleicons.org/) are delivered inside the container image. This makes the image larger, but means that icons are not loaded from an external third-party CDN. In addition, this also gives the benefit of being able to swap Font Awesome and Simple Icons in the `config.json` file by changing the path to the SVG files.
+Icons from the following sources are delivered inside the container image. This makes the image larger, but means that icons are not loaded from an external third-party CDN. You can switch between icon packs by changing the path to each SVG file in the `config.json`.
+
+| Icon pack                                                                  | Example icon path for `user_includes/config.json`              |
+|----------------------------------------------------------------------------|----------------------------------------------------------------|
+| [Bootstrap Icons](https://icons.getbootstrap.com/)                         | `./vendor/twbs/bootstrap-icons/icons/qr-code.svg`              |
+| [Font Awesome (free)](https://fontawesome.com/)                            | `./vendor/fortawesome/font-awesome/svgs/solid/globe.svg`       |
+| [Homelab SVG assets](https://github.com/loganmarchione/homelab-svg-assets) | `./vendor/loganmarchione/homelab-svg-assets/assets/linux.svg`  |
+| [Simple Icons](https://simpleicons.org/)                                   | `./vendor/simple-icons/simple-icons/icons/homeassistant.svg`   |
