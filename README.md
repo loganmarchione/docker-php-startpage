@@ -17,8 +17,13 @@ Runs a PHP-based startpage in Docker
   - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information.
 
 ## Screenshots
+
+### Desktop
+
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_dark.png)
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_light.png)
+
+### Mobile
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
@@ -27,6 +32,7 @@ Runs a PHP-based startpage in Docker
 
   - Everything is PHP (server-side), so the Docker container running this image will need to be able to reach URLs to do a status check.
   - The startpage works out of the box (using a sample `config.json` file), but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files.
+  - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information.
 
 ## Docker image information
 

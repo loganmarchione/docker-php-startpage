@@ -14,7 +14,7 @@
 - [Icon packs](#icon-packs)
 
 ## Custom configuration files
-The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (the filenames must be spelled exactly like below).
+The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. The configuration filenames are below (the filenames must be spelled exactly like below). These files are only loaded if they exist inside the `user_includes` directory. If they are not present (or misspelled), they are not loaded.
 ```
 user_includes
 ├── config.json
@@ -23,6 +23,7 @@ user_includes
 ├── header_links.php
 └── style.css
 ```
+
 ⚠️ Anything inside `/var/www/html/user_includes` can be served by Apache. Don't put anything containing usernames/passwords/etc... in this directory. ⚠️
 
 ### JSON-based configuration file
@@ -77,7 +78,7 @@ Below is the layout of the group/service options, with some notes.
 ```
 ### Custom user includes
 
-The startpage works out of the box (using a sample `config.json` file), but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. These files are only loaded if they exist inside the `user_includes` directory. If they are not present, they are not loaded.
+These files are only loaded if they exist inside the `user_includes` directory. If they are not present (or misspelled), they are not loaded.
 
 #### Custom centered zone in navbar
 The file `header_center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). This content will be centered in the navbar. Populate it as needed.
@@ -131,9 +132,7 @@ body {
 
 ## Dark mode
 
-[Bootstrap 5.3.0](https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/) supports dark mode. Currently, it defaults to `dark`, but can be set to `dark` or `light` via an option in the `config.json` file.
-
-Eventually, I'll implement a HTML/CSS/JS solution to switch between modes with a button.
+[Bootstrap 5.3.0](https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/) supports dark mode. Currently, the startpage defaults to `dark`, but can be set to `dark` or `light` via an option in the `config.json` file. Eventually, I'll implement a HTML/CSS/JS solution to switch between modes with a button.
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
@@ -158,7 +157,7 @@ In the `config.json file`, when `"stat": true`, PHP will use `get_headers` to pe
     ... 
 ```
 
-Based on the status code returned, it will display the following icons.
+Based on the status code returned, it will display the following icons. When `"stat": false`, the check is skipped and a `Gray X` is displayed.
 ```
 200 - 300       = Green check
 401             = Orange lock
@@ -167,9 +166,9 @@ Based on the status code returned, it will display the following icons.
 Everything else = Red X
 ```
 
-When `"stat": false`, the check is skipped and a `Gray X` is displayed.
-
 You can hover over the status icon to see a tooltip containing the status code.
+
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/http_status_code_check.png)
 
 ## Mobile-friendly
 

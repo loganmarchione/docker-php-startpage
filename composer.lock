@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ac9a4661746a9976b9f159371788f88",
+    "content-hash": "3eb73856ad1d439098c2a90f428d29cb",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -128,16 +128,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v5.2.3",
+            "version": "v5.3.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "cb021439c683d9805e2864c58095b92d405e9b11"
+                "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/cb021439c683d9805e2864c58095b92d405e9b11",
-                "reference": "cb021439c683d9805e2864c58095b92d405e9b11",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/cf9454caa00872899215603e5e036d9a824b1b11",
+                "reference": "cf9454caa00872899215603e5e036d9a824b1b11",
                 "shasum": ""
             },
             "replace": {
@@ -172,9 +172,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/bootstrap/issues",
-                "source": "https://github.com/twbs/bootstrap/tree/v5.2.3"
+                "source": "https://github.com/twbs/bootstrap/tree/v5.3.0-alpha1"
             },
-            "time": "2022-11-21T18:19:01+00:00"
+            "time": "2022-12-24T16:37:22+00:00"
         },
         {
             "name": "twbs/bootstrap-icons",
@@ -219,7 +219,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "twbs/bootstrap": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
