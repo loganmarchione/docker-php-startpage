@@ -8,6 +8,7 @@
     - Custom links in navbar
     - Custom footer
     - Custom CSS
+- [Dark mode](#dark-mode)
 - [HTTP status checks](#http-status-checks)
 - [Mobile-friendly](#mobile-friendly)
 - [Icon packs](#icon-packs)
@@ -36,9 +37,10 @@ Below is the layout of the global options, with some notes.
 {
     "page_title":           "Dashboard",                                                            # sets the HTML <title> of the page
     "navbar_title_image":   "./vendor/fortawesome/font-awesome/svgs/solid/house.svg",               # sets the image in the navbar (to the left of the main navbar title)
-    "navbar_title":         "10236 Charing Cross Road",                                             # sets the main navbar title (to the right of the navbar image)
+    "navbar_title":         "1234 USA Street",                                                      # sets the main navbar title (to the right of the navbar image)
     "favicon":              "./vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg",      # sets the HTML "favicon" (it's actually a SVG file, not an ICO file)
     "link_target":          "_self",                                                                # sets the HTML <a> target attribute (e.g., _self or _blank)
+    "default_theme":        "dark",                                                                 # sets the Bootstrap theme to dark or light
     ...
     ...
     ...
@@ -75,6 +77,8 @@ Below is the layout of the group/service options, with some notes.
 ```
 ### Custom user includes
 
+The startpage works out of the box (using a sample `config.json` file), but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files. These files are only loaded if they exist inside the `user_includes` directory. If they are not present, they are not loaded.
+
 #### Custom centered zone in navbar
 The file `header_center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). This content will be centered in the navbar. Populate it as needed.
 ```
@@ -86,6 +90,8 @@ The file `header_center.php` contains the HTML used to add extra info to the nav
 </li>>
 ```
 
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/navbar_header_center_on.png)
+
 #### Custom links in navbar
 The `header_links.php` file contains the HTML used to add extra links to the navbar. This content will be on on the right-side of the navbar. Populate it as needed.
 ```
@@ -93,6 +99,8 @@ The `header_links.php` file contains the HTML used to add extra links to the nav
   <a class="nav-link" href="#" target="_blank"><i class="fas fa-sitemap"></i> Network Map</a>
 </li>
 ```
+
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/navbar_links_on.png)
 
 #### Custom footer
 The file `footer.php` contains the HTML used in the footer. Populate it as needed.
@@ -111,6 +119,8 @@ The file `footer.php` contains the HTML used in the footer. Populate it as neede
 </div><!--end container-->
 ```
 
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/footer.png)
+
 #### Custom CSS
 The CSS in `style.css` is loaded after Bootstrap, Font Awesome, and the default CSS. Anything you put in here will overwrite CSS above it. Populate it as needed.
 ```
@@ -118,8 +128,15 @@ body {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
 }
 ```
-In the `darkmode` folder you will find a `style.css` file. You can easily place this in your `/var/www/html/user_includes` folder. Colors can be changed at the top of the CSS.
-![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_dark.png)
+
+## Dark mode
+
+[Bootstrap 5.3.0](https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/) supports dark mode. Currently, it defaults to `dark`, but can be set to `dark` or `light` via an option in the `config.json` file.
+
+Eventually, I'll implement a HTML/CSS/JS solution to switch between modes with a button.
+
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
 
 ## HTTP status checks
 
@@ -160,7 +177,8 @@ You can hover over the status icon to see a tooltip containing the status code.
 
 I am not a web developer, so using Bootstrap ensures that the page works well on desktop and mobile, as well as having a familiar look and feel (e.g., navbar, hamburger menu on mobile, footer, etc...).
 
-![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
 
 ## Icon packs
 

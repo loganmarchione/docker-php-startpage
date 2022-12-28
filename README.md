@@ -11,17 +11,22 @@ Runs a PHP-based startpage in Docker
   - Application: N/A
   - Architecture: `linux/amd64,linux/arm64,linux/arm/v7`
 
-![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop.png)
-
 ## Explanation
 
   - Runs a PHP-based startpage in Docker.
   - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information.
 
+## Screenshots
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_dark.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_light.png)
+
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
+
 ## Requirements
 
   - Everything is PHP (server-side), so the Docker container running this image will need to be able to reach URLs to do a status check.
-  - The startpage works out of the box, but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files.
+  - The startpage works out of the box (using a sample `config.json` file), but it's assumed the user will mount a Docker volume at `/var/www/html/user_includes` to include custom configuration files.
 
 ## Docker image information
 
