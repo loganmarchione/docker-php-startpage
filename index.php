@@ -12,11 +12,12 @@ if (file_exists("user_includes/config.json")) {
 $json_data = json_decode($json, true);
 
 // Set some variables to use later
-$page_title =             $json_data["page_title"];
-$navbar_title_image =     $json_data["navbar_title_image"];
-$navbar_title =           $json_data["navbar_title"];
-$favicon =                $json_data["favicon"];
-$link_target =            $json_data["link_target"];
+$page_title =             $json_data["page_title"] ?? 'Dashboard';
+$navbar_title_image =     $json_data["navbar_title_image"] ?? './vendor/fortawesome/font-awesome/svgs/solid/house.svg';
+$navbar_title =           $json_data["navbar_title"] ?? '1234 USA Street';
+$favicon =                $json_data["favicon"] ?? './vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg';
+$link_target =            $json_data["link_target"] ?? '_blank';
+$default_theme =          $json_data["default_theme"] ?? 'dark';
 
 // Function to check URL HTTP status
 function URL_check(string $url): string {
@@ -60,7 +61,7 @@ function URL_check(string $url): string {
 
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="<?php echo $default_theme; ?>">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -97,9 +98,6 @@ function URL_check(string $url): string {
       display: inline;
       color: gray;
     }
-    .table {
-      background-color: white;
-    }
     .table caption {
       font-size: 150%;
       border: inherit;
@@ -118,7 +116,7 @@ function URL_check(string $url): string {
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <nav class="navbar navbar-expand-md bg-body-tertiary mb-4">
         <div class="container-fluid">
           <img class="navbar_title_image" src="<?php echo $navbar_title_image; ?>"><a class="navbar-brand" href="#"><?php echo $navbar_title; ?></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
