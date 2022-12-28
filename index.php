@@ -152,7 +152,7 @@ function URL_check(string $url): string {
         echo "
           <div class=\"col\">
           <div class=\"table-responsive-sm\">
-            <table class=\"table table-hover table-striped caption-top\">
+            <table class=\"table table-hover caption-top\">
               <caption>$group</caption>
               <thead>
                 <tr>
