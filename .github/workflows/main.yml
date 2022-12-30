@@ -11,8 +11,6 @@ on:
 env:
   USER: loganmarchione
   REPO: docker-php-startpage
-  # See https://github.com/goodwithtech/dockle/issues/188
-  DOCKLE_HOST: "unix:///var/run/docker.sock"
 
 jobs:
   lint:
