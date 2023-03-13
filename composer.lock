@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "526df41d9dfcc56f3d59c2ad7c14a62e",
+    "content-hash": "a57913ae5b17895d578ecf200d3b6784",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -90,16 +90,16 @@
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "8.4.0",
+            "version": "8.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "5c8248f6a5275df3af0903d820db3149847da592"
+                "reference": "5cdbc42a50753c38817ae4349db30d186da45bf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/5c8248f6a5275df3af0903d820db3149847da592",
-                "reference": "5c8248f6a5275df3af0903d820db3149847da592",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/5cdbc42a50753c38817ae4349db30d186da45bf0",
+                "reference": "5cdbc42a50753c38817ae4349db30d186da45bf0",
                 "shasum": ""
             },
             "type": "library",
@@ -124,7 +124,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2023-01-30T00:19:40+00:00"
+            "time": "2023-02-27T13:51:18+00:00"
         },
         {
             "name": "twbs/bootstrap",
