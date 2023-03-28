@@ -21,7 +21,7 @@ LABEL \
   org.opencontainers.image.description="Runs a PHP-based startpage in Docker" \
   org.opencontainers.image.created=$BUILD_DATE
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get -y install --no-install-recommends \
     netcat && \
     rm -rf /var/lib/apt/lists/*
 
