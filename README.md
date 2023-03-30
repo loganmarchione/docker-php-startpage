@@ -85,7 +85,8 @@ vagrant up
 vagrant ssh
 composer update
 php -S 0.0.0.0:8000
-# Page will be available at http://localhost:8000
+
+# page will be available at http://localhost:8000
 ```
 
 ## TODO
