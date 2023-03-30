@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36c44d163d4e0e9f7433796ae34a07ed",
+    "content-hash": "70f2f388d83d798ff094d223a626cb25",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -128,16 +128,16 @@
         },
         {
             "name": "twbs/bootstrap",
-            "version": "v5.3.0-alpha1",
+            "version": "v5.3.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "cf9454caa00872899215603e5e036d9a824b1b11"
+                "reference": "c877cefcef18d6a60c5eaec8df469933e64e212a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/cf9454caa00872899215603e5e036d9a824b1b11",
-                "reference": "cf9454caa00872899215603e5e036d9a824b1b11",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/c877cefcef18d6a60c5eaec8df469933e64e212a",
+                "reference": "c877cefcef18d6a60c5eaec8df469933e64e212a",
                 "shasum": ""
             },
             "replace": {
@@ -172,9 +172,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/bootstrap/issues",
-                "source": "https://github.com/twbs/bootstrap/tree/v5.3.0-alpha1"
+                "source": "https://github.com/twbs/bootstrap/tree/v5.3.0-alpha2"
             },
-            "time": "2022-12-24T16:37:22+00:00"
+            "time": "2023-03-24T14:30:16+00:00"
         },
         {
             "name": "twbs/bootstrap-icons",
