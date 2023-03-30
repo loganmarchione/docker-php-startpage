@@ -1,3 +1,6 @@
 *.env
 /vendor/
 /user_includes
+
+# Vagrant
+.vagrant/

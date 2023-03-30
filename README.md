@@ -81,8 +81,10 @@ Below is an example of running locally (used to edit/test/debug).
 ```
 git clone https://github.com/loganmarchione/docker-php-startpage.git
 cd docker-php-startpage
+vagrant up
+vagrant ssh
 composer update
-php -S localhost:8000
+php -S 0.0.0.0:8000
 # Page will be available at http://localhost:8000
 ```
 
