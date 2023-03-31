@@ -7,14 +7,14 @@ services:
       context: .
       dockerfile: Dockerfile
     networks:
-      - app
+      - startpage
     ports:
       - '8888:80'
     volumes:
       - 'user_includes:/var/www/html/user_includes'
 
 networks:
-  app:
+  startpage:
 
 volumes:
   user_includes:
