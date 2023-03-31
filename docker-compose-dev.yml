@@ -1,0 +1,21 @@
+version: '3'
+services:
+  startpage:
+    container_name: docker-php-startpage
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - app
+    ports:
+      - '8888:80'
+    volumes:
+      - 'user_includes:/var/www/html/user_includes'
+
+networks:
+  app:
+
+volumes:
+  user_includes:
+    driver: local

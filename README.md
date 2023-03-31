@@ -59,12 +59,12 @@ Below is an example docker-compose.yml file.
 version: '3'
 services:
   startpage:
-    container_name: startpage
+    container_name: docker-php-startpage
     restart: unless-stopped
     networks:
       - startpage
     ports:
-      - '80:80'
+      - '8888:80'
     volumes:
       - 'user_includes:/var/www/html/user_includes'
     image: loganmarchione/docker-php-startpage:latest
@@ -79,14 +79,14 @@ volumes:
 
 Below is an example of running locally (used to edit/test/debug).
 ```
-git clone https://github.com/loganmarchione/docker-php-startpage.git
-cd docker-php-startpage
-vagrant up
-vagrant ssh
-composer update
-php -S 0.0.0.0:8000
+# Build the Dockerfile
+docker compose -f docker-compose-dev.yml up -d
 
-# page will be available at http://localhost:8000
+# View logs
+docker compose -f docker-compose-dev.yml logs -f
+
+# Destroy when done
+docker compose -f docker-compose-dev.yml down
 ```
 
 ## TODO
