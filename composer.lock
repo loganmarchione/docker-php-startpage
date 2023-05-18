@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c01e8fb1486065ee724422cb11ec91e",
+    "content-hash": "f33d43a7763028cea767a33c35557ba0",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -53,16 +53,16 @@
         },
         {
             "name": "loganmarchione/homelab-svg-assets",
-            "version": "0.1.7",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loganmarchione/homelab-svg-assets.git",
-                "reference": "3833e0816155cd535441c86a02a0def8bc847340"
+                "reference": "c0245cc772e96c28e80c74f1e215e730fa7e251b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/3833e0816155cd535441c86a02a0def8bc847340",
-                "reference": "3833e0816155cd535441c86a02a0def8bc847340",
+                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/c0245cc772e96c28e80c74f1e215e730fa7e251b",
+                "reference": "c0245cc772e96c28e80c74f1e215e730fa7e251b",
                 "shasum": ""
             },
             "type": "library",
@@ -86,20 +86,20 @@
                 "issues": "https://github.com/loganmarchione/homelab-svg-assets/issues",
                 "source": "https://github.com/loganmarchione/homelab-svg-assets"
             },
-            "time": "2023-04-13T20:02:28+00:00"
+            "time": "2023-05-18T14:36:56+00:00"
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "8.10.0",
+            "version": "8.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "71a731f58a484263acbe53e193bd284de036d6a1"
+                "reference": "e99cdf45f2cefdbc7ddc5101f710ec850d08eb6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/71a731f58a484263acbe53e193bd284de036d6a1",
-                "reference": "71a731f58a484263acbe53e193bd284de036d6a1",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/e99cdf45f2cefdbc7ddc5101f710ec850d08eb6e",
+                "reference": "e99cdf45f2cefdbc7ddc5101f710ec850d08eb6e",
                 "shasum": ""
             },
             "type": "library",
@@ -124,7 +124,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2023-04-09T15:17:48+00:00"
+            "time": "2023-05-15T05:25:50+00:00"
         },
         {
             "name": "twbs/bootstrap",
@@ -178,16 +178,16 @@
         },
         {
             "name": "twbs/bootstrap-icons",
-            "version": "v1.10.4",
+            "version": "v1.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/icons.git",
-                "reference": "d7747f9b467de4d62841e2308367a88eaacc9aac"
+                "reference": "648aa8238437d9da9227f6273cc163ec5841382d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/icons/zipball/d7747f9b467de4d62841e2308367a88eaacc9aac",
-                "reference": "d7747f9b467de4d62841e2308367a88eaacc9aac",
+                "url": "https://api.github.com/repos/twbs/icons/zipball/648aa8238437d9da9227f6273cc163ec5841382d",
+                "reference": "648aa8238437d9da9227f6273cc163ec5841382d",
                 "shasum": ""
             },
             "type": "library",
@@ -211,9 +211,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/icons/issues",
-                "source": "https://github.com/twbs/icons/tree/v1.10.4"
+                "source": "https://github.com/twbs/icons/tree/v1.10.5"
             },
-            "time": "2023-04-03T18:12:42+00:00"
+            "time": "2023-04-26T19:56:04+00:00"
         }
     ],
     "packages-dev": [],
