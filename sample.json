@@ -55,6 +55,20 @@
                 "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
                 "stat": true,
                 "misc": ""
+            },
+            "offline": {
+                "name": "Offline",
+                "href": "https://httpstat.us/666",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "status_check_disabled": {
+                "name": "Status check disabled",
+                "href": "https://httpstat.us/600",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "stat": false,
+                "misc": ""
             }
         },
         "Home": {
