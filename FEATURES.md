@@ -18,9 +18,9 @@ The startpage works out of the box, but it's assumed the user will mount a Docke
 ```
 user_includes
 ├── config.json
-├── footer.php
-├── header_center.php
-├── header_links.php
+├── footer.html
+├── header_center.html
+├── header_links.html
 └── style.css
 ```
 
@@ -33,7 +33,7 @@ The configuration file (`config.json`) has two sections:
 1. Groups (this a an array which contains another array of services)
 
 #### Global configuration options
-Below is the layout of the global options, with some notes.
+Below is the layout of the global options, with some notes. The options shown below happen to be the defaults.
 ```
 {
     "page_title":           "Dashboard",                                                            # sets the HTML <title> of the page
@@ -61,7 +61,7 @@ Below is the layout of the group/service options, with some notes.
                 "href": "https://httpstat.us/404",                                       # The link of the URL displayed above
                 "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",        # The path to the SVG icon
                 "stat": true,                                                            # True or false to perform a status check
-                "misc": ""                                                               # Extra info that can go in the "Misc." column
+                "misc": ""                                                               # Extra info that can go in the "Misc." column (this can be raw HTML)
             }
         },
         "Home": {
@@ -81,20 +81,20 @@ Below is the layout of the group/service options, with some notes.
 These files are only loaded if they exist inside the `user_includes` directory. If they are not present (or misspelled), they are not loaded.
 
 #### Custom centered zone in navbar
-The file `header_center.php` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). This content will be centered in the navbar. Populate it as needed.
+The file `header_center.html` contains the HTML used to add extra info to the navbar (e.g., a custom search engine). This content will be centered in the navbar. Populate it as needed.
 ```
 <li class="nav-item">
   <form id="form"> 
     <input type="search" id="query" name="q" placeholder="Search...">
     <button>Search</button>
   </form>
-</li>>
+</li>
 ```
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/navbar_header_center_on.png)
 
 #### Custom links in navbar
-The `header_links.php` file contains the HTML used to add extra links to the navbar. This content will be on on the right-side of the navbar. Populate it as needed.
+The `header_links.html` file contains the HTML used to add extra links to the navbar. This content will be on on the right-side of the navbar. Populate it as needed.
 ```
 <li class="nav-item">
   <a class="nav-link" href="#" target="_blank"><i class="fas fa-sitemap"></i> Network Map</a>
@@ -104,7 +104,7 @@ The `header_links.php` file contains the HTML used to add extra links to the nav
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/navbar_links_on.png)
 
 #### Custom footer
-The file `footer.php` contains the HTML used in the footer. Populate it as needed.
+The file `footer.html` contains the HTML used in the footer. Populate it as needed.
 ```
 <div class="container">
   <footer class="py-3 my-4">
@@ -125,14 +125,14 @@ The file `footer.php` contains the HTML used in the footer. Populate it as neede
 #### Custom CSS
 The CSS in `style.css` is loaded after Bootstrap, Font Awesome, and the default CSS. Anything you put in here will overwrite CSS above it. Populate it as needed.
 ```
-body {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABZ0RVh0Q3JlYXRpb24gVGltZQAxMC8yOS8xMiKqq3kAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAABHklEQVRIib2Vyw6EIAxFW5idr///Qx9sfG3pLEyJ3tAwi5EmBqRo7vHawiEEERHS6x7MTMxMVv6+z3tPMUYSkfTM/R0fEaG2bbMv+Gc4nZzn+dN4HAcREa3r+hi3bcuu68jLskhVIlW073tWaYlQ9+F9IpqmSfq+fwskhdO/AwmUTJXrOuaRQNeRkOd5lq7rXmS5InmERKoER/QMvUAPlZDHcZRhGN4CSeGY+aHMqgcks5RrHv/eeh455x5KrMq2yHQdibDO6ncG/KZWL7M8xDyS1/MIO0NJqdULLS81X6/X6aR0nqBSJcPeZnlZrzN477NKURn2Nus8sjzmEII0TfMiyxUuxphVWjpJkbx0btUnshRihVv70Bv8ItXq6Asoi/ZiCbU6YgAAAABJRU5ErkJggg==);
+.table th {
+    background-color: #000000;
 }
 ```
 
 ## Dark mode
 
-[Bootstrap 5.3.0](https://blog.getbootstrap.com/2022/12/24/bootstrap-5-3-0-alpha1/) supports dark mode. Currently, the startpage defaults to `dark`, but can be set to `dark` or `light` via an option in the `config.json` file. Eventually, I'll implement a HTML/CSS/JS solution to switch between modes with a button.
+[Bootstrap 5.3.0](https://blog.getbootstrap.com/2023/05/30/bootstrap-5-3-0/) supports dark mode. Currently, the startpage defaults to `dark`, but can be set to `dark` or `light` via an option in the `config.json` file. Eventually, I'll implement a HTML/CSS/JS solution to switch between modes with a button.
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
