@@ -11,7 +11,7 @@ services:
     ports:
       - '8888:80'
     volumes:
-      - 'user_includes:/var/www/html/user_includes'
+      - './user_includes:/var/www/html/user_includes'
 
 networks:
   startpage:
