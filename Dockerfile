@@ -29,6 +29,8 @@ COPY --from=builder /app/vendor /var/www/html/vendor
 
 COPY VERSION /
 
+COPY templates /var/www/html/templates
+
 COPY sample.json /var/www/html/sample.json
 
 COPY index.php /var/www/html/index.php
