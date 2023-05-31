@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-bs-theme="{{ default_theme }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ page_title }}</title>
+        <link rel="shortcut icon" href="{{ favicon }}">
+        <link href="./vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./vendor/fortawesome/font-awesome/css/all.min.css" rel="stylesheet">
+        <style>
+            .logotype {
+                height: 1.25em;
+                vertical-align: text-top;
+            }
+
+            .navbar_title_image {
+                height: 1.25em;
+                padding-right: 0.5em;
+            }
+
+            .glyph-error {
+                display: inline;
+                color: orange;
+            }
+
+            .glyph-online {
+                display: inline;
+                color: green;
+            }
+
+            .glyph-offline {
+                display: inline;
+                color: red;
+            }
+
+            .glyph-auth {
+                display: inline;
+                color: orange;
+            }
+
+            .glyph-disabled {
+                display: inline;
+                color: gray;
+            }
+
+            .table caption {
+                font-size: 150%;
+                border: inherit;
+            }
+
+            .table td {
+                /* So table won't wrap (i.e., I want them to scroll horizontally on mobile) */
+                white-space: nowrap;
+            }
+            {% include 'style.css' ignore missing %}
+
+        </style>
+
+    </head>
+    <body>
+
+    <header>
+        <nav class="navbar navbar-expand-md bg-body-tertiary mb-4">
+            <div class="container-fluid">
+                <img class="navbar_title_image" src="{{ navbar_title_image }}"><a class="navbar-brand" href="#">{{ navbar_title }}</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto mb-2 mb-md-0">
+                        {% include 'header_center.html' ignore missing %}
+                    </ul>
+                    <ul class="navbar-nav ms-0 mb-2 mb-md-0">
+                        {% include 'header_links.html' ignore missing %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="window.location.reload(true);"><i class="fas fa-sync fa-spin"></i> Reload</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+{% for groupName, items in groups %}
+            <div class="col">
+                <div class="table-responsive-sm">
+                    <table class="table table-hover caption-top">
+                        <caption>{{ groupName }}</caption>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Misc.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+{% for itemKey, item in items %}
+                                <tr>
+                                    <td><img class="logotype" src="{{ item.icon }}"> <a href="{{ item.href }}" target="{{ link_target }}">{{ item.name }}</a></td>
+                                    <td>{{ item.statusHtml | raw }}</td>
+                                    <td>{{ item.misc | raw }}</td>
+                                </tr>
+{% endfor %}
+                        </tbody>
+                    </table>
+                </div><!--end table-responsive-->
+            </div><!--end col-->
+{% endfor %}
+        </div><!--end row-->
+    </div><!--end container-->
+
+{% include 'footer.html' ignore missing %}
+
+    <script src="./vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+
+    </body>
+</html>
