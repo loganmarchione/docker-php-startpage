@@ -1,15 +1,26 @@
 <?php
 // This is probably the worst PHP you'll ever read in your life
 
-// Check if a user config.json file exists, otherwise use the sample file
-if (file_exists("user_includes/config.json")) {
-    $json = file_get_contents("user_includes/config.json");
+// Check if a user's config.json file exists, otherwise use the sample file
+$jsonFile = "user_includes/config.json";
+if (file_exists($jsonFile)) {
+    $json = file_get_contents($jsonFile);
 } else {
     $json = file_get_contents("sample.json");
 }
 
+// Check if the file read was successful
+if ($json === false) {
+    throw new \RuntimeException("ERROR: Failed to read JSON file: $jsonFile");
+}
+
 // Decode the JSON
 $json_data = json_decode($json, true);
+
+// Check if the JSON decoding was successful
+if ($json_data === null) {
+    throw new \RuntimeException("ERROR: Failed to decode JSON: " . json_last_error_msg());
+}
 
 // Set some variables from the JSON file to use later
 $page_title =             $json_data["page_title"] ?? 'Dashboard';
@@ -45,6 +56,12 @@ function URL_check(string $url): string {
 
     // Get the headers and 3-digit status code
     $headers = get_headers($url);
+
+    // If headers are false or the array is empty
+    if ($headers === false || !isset($headers[0])) {
+        return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="php-error"><i class="fas fa-circle-xmark"></i></span>';
+    }
+
     $status_code = substr($headers[0], 9, 3 );
 
     // If $headers contains "401", display lock icon
