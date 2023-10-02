@@ -8,6 +8,6 @@
         "twig/twig": "3.7.1"
     },
     "require-dev": {
-        "phpstan/phpstan": "1.10.34"
+        "phpstan/phpstan": "1.10.37"
     }
 }
