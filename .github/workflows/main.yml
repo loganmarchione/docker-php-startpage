@@ -41,6 +41,13 @@ jobs:
         failure-threshold: error
         ignore: DL3008,DL3018
 
+    - name: PHP Compatibility
+      uses: pantheon-systems/phpcompatibility-action@v1
+      with:
+        skip-php-setup: true
+        test-versions: 7.4-
+        paths: ${{ github.workspace }}/src
+
   ci:
     name: Build and test
 
