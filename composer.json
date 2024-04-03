@@ -1,6 +1,6 @@
 {
     "require": {
-        "fortawesome/font-awesome": "6.5.1",
+        "fortawesome/font-awesome": "6.5.2",
         "loganmarchione/homelab-svg-assets": "0.3.5",
         "simple-icons/simple-icons": "11.9.0",
         "twbs/bootstrap": "v5.3.3",
