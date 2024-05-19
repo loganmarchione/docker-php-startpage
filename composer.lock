@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c92cc7f10141fd31f5a106a1e6595352",
+    "content-hash": "f911c06d2d94524161aa2b0fc7c67d93",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -90,16 +90,16 @@
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "v11.9.0",
+            "version": "11.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "f4ad1642d9164416b7bc4ba64041ba058aee38b5"
+                "reference": "0af835e2949a9222965522780e5e0810d3c53382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/f4ad1642d9164416b7bc4ba64041ba058aee38b5",
-                "reference": "f4ad1642d9164416b7bc4ba64041ba058aee38b5",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/0af835e2949a9222965522780e5e0810d3c53382",
+                "reference": "0af835e2949a9222965522780e5e0810d3c53382",
                 "shasum": ""
             },
             "type": "library",
@@ -124,7 +124,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2024-03-10T00:26:49+00:00"
+            "time": "2024-05-19T00:29:00+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
