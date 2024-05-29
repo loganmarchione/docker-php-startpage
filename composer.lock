@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c92cc7f10141fd31f5a106a1e6595352",
+    "content-hash": "d696ce3817ff5e1d365dc0d1003517f4",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -53,16 +53,16 @@
         },
         {
             "name": "loganmarchione/homelab-svg-assets",
-            "version": "0.3.5",
+            "version": "0.3.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loganmarchione/homelab-svg-assets.git",
-                "reference": "b248d19ce7d119443dd9d2f1ef5fa98064594d19"
+                "reference": "6c3d6c8b4742ded0d0643aef2c6f7008fdbeb5a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/b248d19ce7d119443dd9d2f1ef5fa98064594d19",
-                "reference": "b248d19ce7d119443dd9d2f1ef5fa98064594d19",
+                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/6c3d6c8b4742ded0d0643aef2c6f7008fdbeb5a7",
+                "reference": "6c3d6c8b4742ded0d0643aef2c6f7008fdbeb5a7",
                 "shasum": ""
             },
             "type": "library",
@@ -86,7 +86,7 @@
                 "issues": "https://github.com/loganmarchione/homelab-svg-assets/issues",
                 "source": "https://github.com/loganmarchione/homelab-svg-assets"
             },
-            "time": "2024-03-10T21:09:45+00:00"
+            "time": "2024-05-29T16:29:26+00:00"
         },
         {
             "name": "simple-icons/simple-icons",
