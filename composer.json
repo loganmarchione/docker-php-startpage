@@ -2,7 +2,7 @@
     "require": {
         "fortawesome/font-awesome": "6.5.1",
         "loganmarchione/homelab-svg-assets": "0.3.5",
-        "simple-icons/simple-icons": "11.9.0",
+        "simple-icons/simple-icons": "13.6.0",
         "twbs/bootstrap": "v5.3.3",
         "twbs/bootstrap-icons": "1.11.3",
         "twig/twig": "3.8.0"
