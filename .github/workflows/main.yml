@@ -26,14 +26,13 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.3'
+        tools: phpstan
 
     - name: Install dependencies
       run: composer install --no-interaction --no-plugins --no-scripts --no-dev --prefer-dist --no-ansi --no-progress           
 
-    - name: Lint PHP
-      uses: docker://ghcr.io/phpstan/phpstan
-      with:
-        args: analyse --level 7 index.php
+    - name: Run PHPStan
+      run: phpstan analyse --level 7 index.php
 
     - name: Lint Dockerfile with Hadolint
       uses: hadolint/hadolint-action@v3.1.0
