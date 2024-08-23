@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8437800bc89bfe9f678c424408adf66c",
+    "content-hash": "3c96749a44234172439764a12dc4b363",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
-            "version": "6.5.1",
+            "version": "6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "deeea78c52bfe00b6e251ffddccf5570d5fdb05e"
+                "reference": "37eff7fa00de26db41183a3ad8ed0e9119fbc44b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/deeea78c52bfe00b6e251ffddccf5570d5fdb05e",
-                "reference": "deeea78c52bfe00b6e251ffddccf5570d5fdb05e",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/37eff7fa00de26db41183a3ad8ed0e9119fbc44b",
+                "reference": "37eff7fa00de26db41183a3ad8ed0e9119fbc44b",
                 "shasum": ""
             },
             "type": "library",
@@ -49,7 +49,7 @@
                 "issues": "https://github.com/FortAwesome/Font-Awesome/issues",
                 "source": "https://github.com/FortAwesome/Font-Awesome"
             },
-            "time": "2023-11-30T22:38:48+00:00"
+            "time": "2024-07-16T17:13:31+00:00"
         },
         {
             "name": "loganmarchione/homelab-svg-assets",
