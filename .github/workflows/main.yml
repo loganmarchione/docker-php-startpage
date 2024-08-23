@@ -25,7 +25,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2'
+        php-version: '8.3'
 
     - name: Install dependencies
       run: composer install --no-interaction --no-plugins --no-scripts --no-dev --prefer-dist --no-ansi --no-progress           
