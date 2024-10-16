@@ -2,173 +2,165 @@
     "page_title":           "Dashboard",
     "navbar_title_image":   "./vendor/fortawesome/font-awesome/svgs/solid/house.svg",
     "navbar_title":         "1234 USA Street",
-    "favicon":              "./vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg",
+    "favicon":              "./vendor/fortawesome/font-awesome/svgs/solid/house.svg",
     "link_target":          "_self",
-    "default_theme":        "dark",
     "Groups": {
-        "Web": {
+        "Networking": {
+            "OPNsense": {
+                "name": "OPNSense",
+                "href": "https://opnsense.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/opnsense.svg",
+                "stat": true,
+                "misc": "Router"
+            },
+            "Pi-hole": {
+                "name": "Pi-hole",
+                "href": "https://pi-hole.net/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/pihole.svg",
+                "stat": true,
+                "misc": "DHCP/DNS"
+            }
+        },
+        "Apps": {
+            "AudioBookShelf": {
+                "name": "Audiobookshelf",
+                "href": "https://www.audiobookshelf.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/audiobookshelf.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Draw.io": {
+                "name": "Draw.io",
+                "href": "https://www.drawio.com/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/diagramsdotnet.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "DokuWiki": {
+                "name": "DokuWiki",
+                "href": "https://www.dokuwiki.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/dokuwiki.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Grafana": {
+                "name": "Grafana",
+                "href": "https://grafana.com/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/grafana.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "HomeAssistant": {
+                "name": "Home Assistant",
+                "href": "https://www.home-assistant.io/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/homeassistant.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Immich": {
+                "name": "Immich",
+                "href": "https://immich.app/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/immich.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Jellyfin": {
+                "name": "Jellyfin",
+                "href": "https://jellyfin.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/jellyfin.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Linux": {
+                "name": "Linux",
+                "href": "https://kernel.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/linux.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Nginx": {
+                "name": "Nginx",
+                "href": "https://nginx.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/nginx.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Proxmox": {
+                "name": "Proxmox",
+                "href": "https://www.proxmox.com",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/proxmox.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "Rclone": {
+                "name": "Rclone",
+                "href": "https://rclone.org/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/rclone.svg",
+                "stat": true,
+                "misc": ""
+            },
+            "WireGuard": {
+                "name": "WireGuard",
+                "href": "https://www.wireguard.com/",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/wireguard.svg",
+                "stat": true,
+                "misc": ""
+            }
+        },
+        "Test Pages": {
             "200test": {
                 "name": "200 Test page",
                 "href": "https://httpstat.us/200",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/earth-americas.svg",
                 "stat": true,
                 "misc": ""
             },
-            "201test": {
-                "name": "201 Test page",
-                "href": "https://httpstat.us/201",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+            "301test": {
+                "name": "301 Test page",
+                "href": "https://httpstat.us/301",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/earth-europe.svg",
                 "stat": true,
                 "misc": ""
             },
-            "202test": {
-                "name": "202 Test page",
-                "href": "https://httpstat.us/202",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+            "302test": {
+                "name": "302 Test page",
+                "href": "https://httpstat.us/302",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/earth-oceania.svg",
                 "stat": true,
                 "misc": ""
             },
             "401test": {
                 "name": "401 Test page",
                 "href": "https://httpstat.us/401",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "403test": {
-                "name": "403 Test page",
-                "href": "https://httpstat.us/403",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/earth-africa.svg",
                 "stat": true,
                 "misc": ""
             },
             "404test": {
                 "name": "404 Test page",
                 "href": "https://httpstat.us/404",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/earth-asia.svg",
                 "stat": true,
                 "misc": ""
             },
             "500test": {
                 "name": "500 Test page",
                 "href": "https://httpstat.us/500",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "offline": {
-                "name": "Offline",
-                "href": "https://httpstat.us/666",
                 "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
                 "stat": true,
                 "misc": ""
             },
             "status_check_disabled": {
-                "name": "Status check disabled",
-                "href": "https://httpstat.us/600",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+                "name": "Check disabled",
+                "href": "https://httpstat.us/",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/eye-slash.svg",
                 "stat": false,
                 "misc": ""
-            }
-        },
-        "Home": {
-            "200test": {
-                "name": "200 Test page",
-                "href": "https://httpstat.us/200",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
             },
-            "201test": {
-                "name": "201 Test page",
-                "href": "https://httpstat.us/201",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "202test": {
-                "name": "202 Test page",
-                "href": "https://httpstat.us/202",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "401test": {
-                "name": "401 Test page",
-                "href": "https://httpstat.us/401",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "403test": {
-                "name": "403 Test page",
-                "href": "https://httpstat.us/403",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "404test": {
-                "name": "404 Test page",
-                "href": "https://httpstat.us/404",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "500test": {
-                "name": "500 Test page",
-                "href": "https://httpstat.us/500",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            }
-        },
-        "Applications": {
-            "200test": {
-                "name": "200 Test page",
-                "href": "https://httpstat.us/200",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "201test": {
-                "name": "201 Test page",
-                "href": "https://httpstat.us/201",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "202test": {
-                "name": "202 Test page",
-                "href": "https://httpstat.us/202",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "401test": {
-                "name": "401 Test page",
-                "href": "https://httpstat.us/401",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "403test": {
-                "name": "403 Test page",
-                "href": "https://httpstat.us/403",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "404test": {
-                "name": "404 Test page",
-                "href": "https://httpstat.us/404",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
-                "stat": true,
-                "misc": ""
-            },
-            "500test": {
-                "name": "500 Test page",
-                "href": "https://httpstat.us/500",
-                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/globe.svg",
+            "offline": {
+                "name": "Offline",
+                "href": "https://httpstat.us/666",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/power-off.svg",
                 "stat": true,
                 "misc": ""
             }
