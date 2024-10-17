@@ -124,7 +124,7 @@ body {
 
 ## Dark mode
 
-[Bootstrap 5.3.0](https://blog.getbootstrap.com/2023/05/30/bootstrap-5-3-0/) supports dark mode. Currently, the defaults is set to `dark`, but can be set `light` via a toggle.
+[Bootstrap 5.3.0](https://blog.getbootstrap.com/2023/05/30/bootstrap-5-3-0/) supports dark mode. Currently, the default is set to `dark` (as God intended), but can be set to `light` via a toggle.
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_dark.png)
 
