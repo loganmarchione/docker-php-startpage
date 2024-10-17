@@ -22,7 +22,7 @@ LABEL \
   org.opencontainers.image.created=$BUILD_DATE
 
 RUN apt-get update && apt-get -y install --no-install-recommends \
-    netcat && \
+    netcat-traditional && \
     rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/vendor /var/www/html/vendor
