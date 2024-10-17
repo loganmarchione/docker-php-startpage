@@ -6,10 +6,18 @@ require_once 'vendor/autoload.php';
 // Check if a user's config.json file exists, otherwise use the sample file
 $jsonFile = "user_includes/config.json";
 if (file_exists($jsonFile)) {
-    $config = json_decode(file_get_contents($jsonFile), true);
+    $json = file_get_contents($jsonFile);
 } else {
-    $config = json_decode(file_get_contents("sample.json"), true);
+    $json = file_get_contents("sample.json");
 }
+
+// Check if the file read was successful
+if ($json === false) {
+    throw new \RuntimeException("ERROR: Failed to read JSON file: $jsonFile");
+}
+
+// Decode the JSON
+$config = json_decode($json, true);
 
 // Check if the JSON decoding was successful
 if ($config === null) {
