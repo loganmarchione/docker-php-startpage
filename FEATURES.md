@@ -8,6 +8,7 @@
     - Custom footer
     - Custom CSS
 - [Dark mode](#dark-mode)
+- [Card search](#card-search)
 - [HTTP status checks](#http-status-checks)
 - [Mobile-friendly](#mobile-friendly)
 - [Icon packs](#icon-packs)
@@ -127,6 +128,12 @@ body {
 
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
 ![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
+
+## Card search
+
+A simple Javascript-based search is included to search for cards (it only searches the card title). I'm not a Javascript-person, so I'm open to feedback on this.
+
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/search.png)
 
 ## HTTP status checks
 
