@@ -124,10 +124,9 @@ body {
 
 ## Dark mode
 
-[Bootstrap 5.3.0](https://blog.getbootstrap.com/2023/05/30/bootstrap-5-3-0/) supports dark mode. Currently, the defaults is set to `dark`, but can be set `light` via a button.
+[Bootstrap 5.3.0](https://blog.getbootstrap.com/2023/05/30/bootstrap-5-3-0/) supports dark mode. Currently, the defaults is set to `dark`, but can be set `light` via a toggle.
 
-![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_dark.png)
-![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/mobile_light.png)
+![Screenshot](https://raw.githubusercontent.com/loganmarchione/docker-php-startpage/master/screenshots/desktop_dark.png)
 
 ## Card search
 
