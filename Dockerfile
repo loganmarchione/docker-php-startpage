@@ -10,7 +10,7 @@ RUN composer install \
     --no-ansi \
     --no-progress
 
-FROM php:8-apache-bullseye
+FROM php:8.3-apache-bookworm
 
 ARG BUILD_DATE
 
@@ -22,7 +22,7 @@ LABEL \
   org.opencontainers.image.created=$BUILD_DATE
 
 RUN apt-get update && apt-get -y install --no-install-recommends \
-    netcat && \
+    netcat-traditional && \
     rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /app/vendor /var/www/html/vendor
