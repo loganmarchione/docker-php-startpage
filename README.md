@@ -15,6 +15,7 @@ Runs a PHP-based startpage in Docker
 
   - Runs a PHP-based startpage in Docker.
   - See [Features](https://github.com/loganmarchione/docker-php-startpage/blob/master/FEATURES.md) for more detailed usage information.
+  - Inspired by https://github.com/hywax/mafl and https://github.com/notclickable-jordan/starbase-80
 
 ## Screenshots
 
