@@ -28,6 +28,22 @@
             width: auto;
             vertical-align: bottom;
         }
+        .icon-container {
+            display: flex;
+            align-items: center;
+        }
+        .icon-img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+        .card-title {
+            font-size: 1.25rem;
+        }
+        .invisible-placeholder {
+            visibility: hidden;
+            height: 1em;
+        }
         .dark-mode-switch {
             position: absolute;
             right: 10px;
@@ -123,15 +139,23 @@
                     <div class="col card-container">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="{{ linkDetails.href }}" target="{{ config.link_target }}">
-                                        <img src="{{ linkDetails.icon }}" alt="Icon">
-                                        {{ linkDetails.name }}
+                                <div class="d-flex align-items-start">
+                                    <a href="{{ linkDetails.href }}" target="{{ config.link_target }}" class="me-3 icon-container">
+                                        <img src="{{ linkDetails.icon }}" alt="Icon" class="icon-img">
                                     </a>
-                                </h5>
-                                {% if linkDetails.misc %}
-                                    <p class="misc-text">{{ linkDetails.misc|raw }}</p>
-                                {% endif %}
+                                    <div>
+                                        <h5 class="card-title mb-1">
+                                            <a href="{{ linkDetails.href }}" target="{{ config.link_target }}">
+                                                {{ linkDetails.name }}
+                                            </a>
+                                        </h5>
+                                        {% if linkDetails.misc %}
+                                            <p class="misc-text mb-0">{{ linkDetails.misc|raw }}</p>
+                                        {% else %}
+                                            <p class="misc-text invisible-placeholder">&nbsp;</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                             <div class="status-icon">
                                 {% if linkDetails.stat %}
