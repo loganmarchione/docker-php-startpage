@@ -14,28 +14,7 @@
         }
         .card {
             position: relative;
-        }
-        .card-title {
-            font-size: 1.25rem;
-        }
-        .card-title a {
-            color: inherit;
-            font-weight: 400;
-            text-decoration: none;
-        }
-        .card-title a:hover {
-            color: var(--bs-link-hover-color);
-            text-decoration: underline;
-        }
-        .card-title img {
-            height: 1em;
-            width: auto;
-            vertical-align: bottom;
-        }
-        .dark-mode-switch {
-            position: absolute;
-            right: 10px;
-            top: 10px;
+            overflow: scroll;
         }
         .glyph-auth {
             color: orange;
@@ -57,14 +36,9 @@
             color: green;
             display: inline;
         }
-        .icon-container {
-            display: flex;
-            align-items: center;
-        }
-        .icon-img {
-            height: 48px;
-            width: auto;
-            display: block;
+        .group-title {
+            margin-bottom: 1rem;
+            margin-top: 2rem;
         }
         .invisible-placeholder {
             visibility: hidden;
@@ -89,9 +63,26 @@
         .search-highlight {
             background-color: yellow;
         }
-        .section-title {
-            margin-bottom: 1rem;
-            margin-top: 2rem;
+        .service-icon-container {
+            display: flex;
+            align-items: center;
+        }
+        .service-icon-img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+        .service-title {
+            font-size: 1.25rem;
+        }
+        .service-title a {
+            color: inherit;
+            font-weight: 400;
+            text-decoration: none;
+        }
+        .service-title a:hover {
+            color: var(--bs-link-hover-color);
+            text-decoration: underline;
         }
         .status-icon {
             font-size: 1em;
@@ -130,22 +121,22 @@
     </nav>
     <div class="container mt-4">
         <div class="mb-3">
-            <input type="text" class="form-control" id="cardSearch" placeholder="Search for a card...">
+            <input type="text" class="form-control" id="serviceSearch" placeholder="Search for a service...">
         </div>
 
         {% for groupName, groupLinks in config.Groups %}
-            <h3 class="section-title">{{ groupName }}</h3>
+            <h3 class="group-title">{{ groupName }}</h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 row-spacing">
                 {% for linkId, service in groupLinks %}
                     <div class="col card-container">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-start">
-                                    <a href="{{ service.href }}" target="{{ config.link_target }}" class="me-3 icon-container">
-                                        <img src="{{ service.icon }}" alt="Icon" class="icon-img">
+                                    <a href="{{ service.href }}" target="{{ config.link_target }}" class="me-3 service-icon-container">
+                                        <img src="{{ service.icon }}" alt="Icon" class="service-icon-img">
                                     </a>
                                     <div>
-                                        <h5 class="card-title mb-1">
+                                        <h5 class="service-title mb-1">
                                             <a href="{{ service.href }}" target="{{ config.link_target }}">
                                                 {{ service.name }}
                                             </a>
@@ -207,14 +198,14 @@
             });
 
             ////////////////////
-            // Card Filtering
+            // Service Search
             ////////////////////
-            const searchInput = document.getElementById('cardSearch');
+            const searchInput = document.getElementById('serviceSearch');
             const cards = document.querySelectorAll('.card-container');
 
             // Store original HTML content of each title
             cards.forEach(card => {
-                const titleElement = card.querySelector('.card-title');
+                const titleElement = card.querySelector('.service-title');
                 titleElement.setAttribute('data-original-html', titleElement.innerHTML);
             });
 
@@ -222,7 +213,7 @@
                 const filter = searchInput.value.toLowerCase();
 
                 cards.forEach(card => {
-                    const titleElement = card.querySelector('.card-title');
+                    const titleElement = card.querySelector('.service-title');
                     const linkElement = titleElement.querySelector('a');
                     const titleText = linkElement.textContent.toLowerCase();
 
