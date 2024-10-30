@@ -9,12 +9,12 @@
     <script src="./vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         html {
-            transition: background-color 0.3s ease, color 0.3s ease;
             font-family: Arial, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         .card {
-            position: relative;
             overflow: scroll;
+            position: relative;
         }
         .glyph-auth {
             color: orange;
@@ -41,12 +41,12 @@
             margin-top: 2rem;
         }
         .invisible-placeholder {
-            visibility: hidden;
             height: 1em;
+            visibility: hidden;
         }
         .misc-text {
-            font-size: 0.8em;
             color: var(--bs-body-color);
+            font-size: 0.8em;
         }
         .navbar-brand {
             height: 30px;
@@ -64,24 +64,24 @@
             background-color: yellow;
         }
         .service-icon-container {
-            display: flex;
             align-items: center;
+            display: flex;
         }
         .service-icon-img {
+            display: block;
             height: 48px;
             width: auto;
-            display: block;
         }
         .service-title {
             font-size: 1.25rem;
-            white-space: nowrap;
+            max-width: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
-            max-width: 100%;
+            white-space: nowrap;
         }
         .service-title a {
-            color: inherit;
             font-weight: 400;
+            color: inherit;
             text-decoration: none;
         }
         .service-title a:hover {
