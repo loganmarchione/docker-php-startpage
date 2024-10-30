@@ -78,11 +78,11 @@ function URL_check(string $url): string {
 
 // Check the status of each link if 'stat' is enabled
 foreach ($config['Groups'] as &$group) {
-    foreach ($group as &$linkDetails) {
-        if ($linkDetails['stat']) {
-            $linkDetails['status'] = URL_check($linkDetails['href']);
+    foreach ($group as &$service) {
+        if ($service['stat']) {
+            $service['status'] = URL_check($service['href']);
         } else {
-            $linkDetails['status'] = '<span class="glyph-disabled" data-bs-toggle="tooltip" data-bs-title="Status check disabled"><i class="fas fa-circle-xmark"></i></span>';
+            $service['status'] = '<span class="glyph-disabled" data-bs-toggle="tooltip" data-bs-title="Status check disabled"><i class="fas fa-circle-xmark"></i></span>';
         }
     }
 }

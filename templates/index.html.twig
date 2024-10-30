@@ -10,9 +10,13 @@
     <style>
         html {
             transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: Arial, sans-serif;
         }
         .card {
             position: relative;
+        }
+        .card-title {
+            font-size: 1.25rem;
         }
         .card-title a {
             color: inherit;
@@ -24,25 +28,9 @@
             text-decoration: underline;
         }
         .card-title img {
-            height: 1.2em;
+            height: 1em;
             width: auto;
             vertical-align: bottom;
-        }
-        .icon-container {
-            display: flex;
-            align-items: center;
-        }
-        .icon-img {
-            height: 48px;
-            width: auto;
-            display: block;
-        }
-        .card-title {
-            font-size: 1.25rem;
-        }
-        .invisible-placeholder {
-            visibility: hidden;
-            height: 1em;
         }
         .dark-mode-switch {
             position: absolute;
@@ -69,8 +57,21 @@
             color: green;
             display: inline;
         }
+        .icon-container {
+            display: flex;
+            align-items: center;
+        }
+        .icon-img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+        .invisible-placeholder {
+            visibility: hidden;
+            height: 1em;
+        }
         .misc-text {
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: var(--bs-body-color);
         }
         .navbar-brand {
@@ -135,22 +136,22 @@
         {% for groupName, groupLinks in config.Groups %}
             <h3 class="section-title">{{ groupName }}</h3>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 row-spacing">
-                {% for linkId, linkDetails in groupLinks %}
+                {% for linkId, service in groupLinks %}
                     <div class="col card-container">
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-start">
-                                    <a href="{{ linkDetails.href }}" target="{{ config.link_target }}" class="me-3 icon-container">
-                                        <img src="{{ linkDetails.icon }}" alt="Icon" class="icon-img">
+                                    <a href="{{ service.href }}" target="{{ config.link_target }}" class="me-3 icon-container">
+                                        <img src="{{ service.icon }}" alt="Icon" class="icon-img">
                                     </a>
                                     <div>
                                         <h5 class="card-title mb-1">
-                                            <a href="{{ linkDetails.href }}" target="{{ config.link_target }}">
-                                                {{ linkDetails.name }}
+                                            <a href="{{ service.href }}" target="{{ config.link_target }}">
+                                                {{ service.name }}
                                             </a>
                                         </h5>
-                                        {% if linkDetails.misc %}
-                                            <p class="misc-text mb-0">{{ linkDetails.misc|raw }}</p>
+                                        {% if service.misc %}
+                                            <p class="misc-text mb-0">{{ service.misc|raw }}</p>
                                         {% else %}
                                             <p class="misc-text invisible-placeholder">&nbsp;</p>
                                         {% endif %}
@@ -158,8 +159,8 @@
                                 </div>
                             </div>
                             <div class="status-icon">
-                                {% if linkDetails.stat %}
-                                    {{ linkDetails.status|raw }}
+                                {% if service.stat %}
+                                    {{ service.status|raw }}
                                 {% else %}
                                     <span class="glyph-disabled" data-bs-toggle="tooltip" data-bs-title="Status check disabled"><i class="fas fa-circle-xmark"></i></span>
                                 {% endif %}
