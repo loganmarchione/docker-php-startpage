@@ -16,6 +16,9 @@
             overflow: scroll;
             position: relative;
         }
+        .card-body {
+            padding: .9rem;
+        }
         .glyph-auth {
             color: orange;
             display: inline;
@@ -69,7 +72,7 @@
         }
         .service-icon-img {
             display: block;
-            height: 48px;
+            height: 40px;
             width: auto;
         }
         .service-title {
@@ -136,7 +139,7 @@
                         <div class="card h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-start">
-                                    <a href="{{ service.href }}" target="{{ config.link_target }}" class="me-3 service-icon-container">
+                                    <a href="{{ service.href }}" target="{{ config.link_target }}" class="me-2 service-icon-container">
                                         <img src="{{ service.icon }}" alt="Icon" class="service-icon-img">
                                     </a>
                                     <div>
