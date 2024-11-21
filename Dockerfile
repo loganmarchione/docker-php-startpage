@@ -10,7 +10,7 @@ RUN composer install \
     --no-ansi \
     --no-progress
 
-FROM php:8.3-apache-bookworm
+FROM php:8.4-apache-bookworm
 
 ARG BUILD_DATE
 
