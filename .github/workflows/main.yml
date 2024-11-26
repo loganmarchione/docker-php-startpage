@@ -25,8 +25,8 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.3'
-        tools: phpstan
+        php-version: '8.4'
+        tools: phpstan, phpstan/phpstan-deprecation-rules
 
     - name: Install dependencies
       run: composer install --no-interaction --no-plugins --no-scripts --no-dev --prefer-dist --no-ansi --no-progress           
