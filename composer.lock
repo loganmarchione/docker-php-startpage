@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d419ef48bb363e1c2072884ce172cde",
+    "content-hash": "4c857bb96f6879038775d30a4a27de94",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -90,16 +90,16 @@
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "13.18.0",
+            "version": "13.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "2480b266b9b98ec47db63301d00eb7ac91341c1e"
+                "reference": "625c32a4d9996c6156d313c8bfa87b8560c7fbea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/2480b266b9b98ec47db63301d00eb7ac91341c1e",
-                "reference": "2480b266b9b98ec47db63301d00eb7ac91341c1e",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/625c32a4d9996c6156d313c8bfa87b8560c7fbea",
+                "reference": "625c32a4d9996c6156d313c8bfa87b8560c7fbea",
                 "shasum": ""
             },
             "type": "library",
@@ -114,8 +114,11 @@
                 "svg"
             ],
             "support": {
+                "chat": "https://discord.gg/vUXFa7t5xJ",
                 "docs": "https://github.com/simple-icons/simple-icons#php-usage-",
+                "forum": "https://github.com/simple-icons/simple-icons/discussions",
                 "issues": "https://github.com/simple-icons/simple-icons/issues",
+                "security": "https://github.com/simple-icons/simple-icons/security/policy",
                 "source": "https://github.com/simple-icons/simple-icons"
             },
             "funding": [
@@ -124,7 +127,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2024-11-24T01:56:41+00:00"
+            "time": "2024-12-08T06:22:59+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
