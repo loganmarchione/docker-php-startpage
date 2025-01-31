@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d5c1a2421858e13f407600eeaa4db6a",
+    "content-hash": "47086d54a3b3b93096aaf6c1aa3a13e7",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -90,16 +90,16 @@
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "14.3.0",
+            "version": "14.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "c823d26be57482294896473889eea0516ec88174"
+                "reference": "b7dd14605a2a04bef1429dee82db2cdfe290652c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/c823d26be57482294896473889eea0516ec88174",
-                "reference": "c823d26be57482294896473889eea0516ec88174",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/b7dd14605a2a04bef1429dee82db2cdfe290652c",
+                "reference": "b7dd14605a2a04bef1429dee82db2cdfe290652c",
                 "shasum": ""
             },
             "type": "library",
@@ -127,7 +127,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2025-01-19T01:29:48+00:00"
+            "time": "2025-01-26T05:02:09+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -522,16 +522,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.18.0",
+            "version": "v3.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "acffa88cc2b40dbe42eaf3a5025d6c0d4600cc50"
+                "reference": "d4f8c2b86374f08efc859323dbcd95c590f7124e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/acffa88cc2b40dbe42eaf3a5025d6c0d4600cc50",
-                "reference": "acffa88cc2b40dbe42eaf3a5025d6c0d4600cc50",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/d4f8c2b86374f08efc859323dbcd95c590f7124e",
+                "reference": "d4f8c2b86374f08efc859323dbcd95c590f7124e",
                 "shasum": ""
             },
             "require": {
@@ -586,7 +586,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.18.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.19.0"
             },
             "funding": [
                 {
@@ -598,7 +598,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-29T10:51:50+00:00"
+            "time": "2025-01-29T07:06:14+00:00"
         }
     ],
     "packages-dev": [],
