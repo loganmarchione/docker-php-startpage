@@ -5,6 +5,6 @@
         "simple-icons/simple-icons": "14.4.0",
         "twbs/bootstrap": "v5.3.3",
         "twbs/bootstrap-icons": "1.11.3",
-        "twig/twig": "3.18.0"
+        "twig/twig": "3.19.0"
     }
 }
