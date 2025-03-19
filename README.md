@@ -78,6 +78,8 @@ volumes:
     driver: local
 ```
 
+### Debugging only
+
 Below is an example of running locally (used to edit/test/debug).
 ```
 # Build the Dockerfile
@@ -89,14 +91,3 @@ docker compose -f docker-compose-dev.yml logs -f
 # Destroy when done
 docker compose -f docker-compose-dev.yml down
 ```
-
-## TODO
-- [ ] Learn PHP
-- [x] Add a [healthcheck](https://docs.docker.com/engine/reference/builder/#healthcheck)
-- [ ] Make the image smaller (currently ~500MB due to `vendor` directory, maybe load resources from a CDN?)
-- [ ] Add check to make sure JSON is valid (currently, if it's not valid, nothing will load)
-- [x] Get `navbar_title_image` config option working
-- [ ] Change `config.json` to `config.php`, since PHP allows setting default variables and comments
-- [ ] Investigate using `curl` instead of `get_headers` (`curl` might be faster?)
-- [ ] Add a try/except to the `get_headers` call
-- [x] Run on ARM or ARM64 devices
