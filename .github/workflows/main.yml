@@ -82,14 +82,14 @@ jobs:
         docker run --name test-container --detach ${USER}/${REPO}:${VERSION}
         docker ps -a
 
-    # - name: Container scan with Dockle
-    #   uses: goodwithtech/dockle-action@v0.1.2
-    #   with:
-    #     image: '${{ env.USER }}/${{ env.REPO }}:${{ env.VERSION }}'
-    #     format: 'list'
-    #     exit-code: '1'
-    #     exit-level: 'warn'
-    #     ignore: 'CIS-DI-0001,CIS-DI-0010'
+    - name: Container scan with Dockle
+      uses: goodwithtech/dockle-action@v0.4.15
+      with:
+        image: '${{ env.USER }}/${{ env.REPO }}:${{ env.VERSION }}'
+        format: 'list'
+        exit-code: '1'
+        exit-level: 'warn'
+        ignore: 'CIS-DI-0001,CIS-DI-0010'
 
     - name: Container scan with Trivy
       uses: aquasecurity/trivy-action@0.30.0
