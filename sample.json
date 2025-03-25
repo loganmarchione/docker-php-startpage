@@ -170,6 +170,13 @@
                 "icon": "./vendor/fortawesome/font-awesome/svgs/solid/bug.svg",
                 "stat": true,
                 "misc": ""
+            },
+            "missing_icon": {
+                "name": "Missing icon",
+                "href": "https://httpstat.us/200",
+                "icon": "",
+                "stat": true,
+                "misc": "No icon defined, so fallback to user icon"
             }
         }
     }
