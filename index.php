@@ -56,24 +56,20 @@ function URL_check(string $url): string {
         return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="php-error"><i class="fas fa-circle-xmark"></i></span>';
     }
 
-    $status_code = substr($headers[0], 9, 3 );
+    $status_code = (int) substr($headers[0], 9, 3);
 
-    // If $headers contains "401", display lock icon
-    if (strpos($headers[0], "401") !== false) {
-        return "<span class=\"glyph-auth\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-lock\"></i></span>";
-    // If $headers contains 4xx
-    } elseif ($status_code >= 400 && $status_code <= 499) {
-        return "<span class=\"glyph-error\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-circle-exclamation\"></i></span>";
-    // If $headers contains 5xx
-    } elseif ($status_code >= 500 && $status_code <= 599) {
-        return "<span class=\"glyph-offline\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-circle-xmark\"></i></span>";
-    // If $headers contains 2xx-3xx
-    } elseif ($status_code >= 200 && $status_code <= 399) {
-        return "<span class=\"glyph-online\" data-bs-toggle=\"tooltip\" data-bs-title=\"$status_code\"><i class=\"fas fa-circle-check\"></i></span>";
-    // If $headers contains anything else
-    } else {
-        return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="offline"><i class="fas fa-circle-xmark"></i></span>';
-    }
+    return match (true) {
+        // If $headers contains "401", display lock icon
+        str_contains($headers[0], "401") => '<span class="glyph-auth" data-bs-toggle="tooltip" data-bs-title="' . $status_code . '"><i class="fas fa-lock"></i></span>',
+        // If $headers contains 4xx
+        $status_code >= 400 && $status_code <= 499 => '<span class="glyph-error" data-bs-toggle="tooltip" data-bs-title="' . $status_code . '"><i class="fas fa-circle-exclamation"></i></span>',
+        // If $headers contains 5xx
+        $status_code >= 500 && $status_code <= 599 => '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="' . $status_code . '"><i class="fas fa-circle-xmark"></i></span>',
+        // If $headers contains 2xx-3xx
+        $status_code >= 200 && $status_code <= 399 => '<span class="glyph-online" data-bs-toggle="tooltip" data-bs-title="' . $status_code . '"><i class="fas fa-circle-check"></i></span>',
+        // If $headers contains anything else
+        default => '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="offline"><i class="fas fa-circle-xmark"></i></span>',
+    };
 }
 
 // Check the status of each link if 'stat' is enabled
