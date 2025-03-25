@@ -140,7 +140,7 @@
                             <div class="card-body">
                                 <div class="d-flex align-items-start">
                                     <a href="{{ service.href }}" target="{{ config.link_target }}" class="me-2 service-icon-container">
-                                        <img src="{{ service.icon }}" alt="Icon" class="service-icon-img">
+                                        <img src="{{ service.icon | default('./vendor/fortawesome/font-awesome/svgs/solid/user.svg') }}" alt="Icon" class="service-icon-img">
                                     </a>
                                     <div>
                                         <h5 class="service-title mb-1">
