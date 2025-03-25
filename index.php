@@ -9,6 +9,7 @@ if (file_exists($jsonFile)) {
     $json = file_get_contents($jsonFile);
 } else {
     $json = file_get_contents("sample.json");
+    error_log("WARN: Config file missing, falling back to sample.json");
 }
 
 // Check if the file read was successful
