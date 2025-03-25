@@ -48,11 +48,17 @@ function URL_check(string $url): string {
         )
     );
 
+    // Verify the URL is valid
+    if (!filter_var($url, FILTER_VALIDATE_URL)) {
+        return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="invalid-url"><i class="fas fa-circle-xmark"></i></span>';
+    }
+
     // Get the headers and 3-digit status code
     $headers = get_headers($url);
 
     // If headers are false or the array is empty
-    if ($headers === false || !isset($headers[0])) {
+    $headers = @get_headers($url);
+    if (!$headers || !isset($headers[0])) {
         return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="php-error"><i class="fas fa-circle-xmark"></i></span>';
     }
 
