@@ -163,6 +163,13 @@
                 "icon": "./vendor/fortawesome/font-awesome/svgs/solid/power-off.svg",
                 "stat": true,
                 "misc": ""
+            },
+            "invalid": {
+                "name": "Invalid URL",
+                "href": "http://t[est@127.0.0.1",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/bug.svg",
+                "stat": true,
+                "misc": ""
             }
         }
     }
