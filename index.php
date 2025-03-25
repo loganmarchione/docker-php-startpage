@@ -105,6 +105,7 @@ $twig = new \Twig\Environment($loader, [
 // Render the template
 echo $twig->render('index.html.twig', [
     'config' => $config,
+    'autoescape' => 'html',
 ]);
 
 ?>
