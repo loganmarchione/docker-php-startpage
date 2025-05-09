@@ -4,7 +4,7 @@
         "loganmarchione/homelab-svg-assets": "0.4.9",
         "simple-icons/simple-icons": "14.11.1",
         "twbs/bootstrap": "v5.3.3",
-        "twbs/bootstrap-icons": "1.11.3",
+        "twbs/bootstrap-icons": "1.13.1",
         "twig/twig": "3.20.0"
     }
 }
