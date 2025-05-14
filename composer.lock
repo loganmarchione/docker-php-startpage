@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9cb9522bc30cb428759c22ff1c8fdbe",
+    "content-hash": "175bc10859a5e848d8682b08e5d6c855",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -407,16 +407,16 @@
         },
         {
             "name": "twbs/bootstrap-icons",
-            "version": "v1.11.3",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/icons.git",
-                "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29"
+                "reference": "ce0e49dd063243118a115f17ad1fe1fe7576d552"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/icons/zipball/8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
-                "reference": "8d88686c03c3768a2d82ba4f20c3c4e1b100fa29",
+                "url": "https://api.github.com/repos/twbs/icons/zipball/ce0e49dd063243118a115f17ad1fe1fe7576d552",
+                "reference": "ce0e49dd063243118a115f17ad1fe1fe7576d552",
                 "shasum": ""
             },
             "type": "library",
@@ -440,9 +440,9 @@
             ],
             "support": {
                 "issues": "https://github.com/twbs/icons/issues",
-                "source": "https://github.com/twbs/icons/tree/v1.11.3"
+                "source": "https://github.com/twbs/icons/tree/v1.13.1"
             },
-            "time": "2024-01-03T15:44:45+00:00"
+            "time": "2025-05-09T23:01:19+00:00"
         },
         {
             "name": "twig/twig",
