@@ -3,7 +3,7 @@
         "fortawesome/font-awesome": "6.7.2",
         "loganmarchione/homelab-svg-assets": "0.4.9",
         "simple-icons/simple-icons": "14.11.1",
-        "twbs/bootstrap": "v5.3.3",
+        "twbs/bootstrap": "v5.3.6",
         "twbs/bootstrap-icons": "1.13.1",
         "twig/twig": "3.21.1"
     }
