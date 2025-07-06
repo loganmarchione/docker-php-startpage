@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1eb6321cb3d79fce690b31e871fa862e",
+    "content-hash": "df95e5b17da8bbbd34cf2f7579bfaa8c",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -90,16 +90,16 @@
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "14.15.0",
+            "version": "15.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e"
+                "reference": "efda09d559513cfcd7c0b613478d6538a33c1405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e",
-                "reference": "5664507081ffb65b5a2a0ed2bf2ee2b3b327cb4e",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/efda09d559513cfcd7c0b613478d6538a33c1405",
+                "reference": "efda09d559513cfcd7c0b613478d6538a33c1405",
                 "shasum": ""
             },
             "type": "library",
@@ -127,7 +127,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2025-05-25T00:51:21+00:00"
+            "time": "2025-07-06T14:44:42+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
