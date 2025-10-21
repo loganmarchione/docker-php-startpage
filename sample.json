@@ -178,6 +178,37 @@
                 "stat": true,
                 "misc": "No icon defined, so fallback to user icon"
             }
+        },
+        "Icon tests": {
+            "Bootstrap": {
+                "name": "Bootstrap - QR code",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/twbs/bootstrap-icons/icons/qr-code.svg",
+                "stat": false,
+                "misc": ""
+            },
+            "FontAwesome": {
+                "name": "Font Awesome - QR code",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/fortawesome/font-awesome/svgs/solid/qrcode.svg",
+                "stat": false,
+                "misc": ""
+            },
+            "LoganMarchione": {
+                "name": "Logan Marchione - Linux",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/loganmarchione/homelab-svg-assets/assets/linux.svg",
+                "stat": false,
+                "misc": ""
+            },
+            "Simple Icons": {
+                "name": "Simple Icons - Linux",
+                "href": "https://httpstat.us/200",
+                "icon": "./vendor/simple-icons/simple-icons/icons/linux.svg",
+                "stat": false,
+                "misc": ""
+            }
         }
+
     }
 }
