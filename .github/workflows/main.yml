@@ -35,7 +35,7 @@ jobs:
       run: phpstan analyse --level 7 index.php
 
     - name: Lint Dockerfile with Hadolint
-      uses: hadolint/hadolint-action@v3.2.0
+      uses: hadolint/hadolint-action@v3.3.0
       with:
         failure-threshold: error
         ignore: DL3008,DL3018
