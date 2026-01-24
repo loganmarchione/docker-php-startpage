@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "175c06f805d560ad8e45e789b7d0e36e",
+    "content-hash": "3ed44023fda07b7332df9c603d57867f",
     "packages": [
         {
             "name": "fortawesome/font-awesome",
@@ -53,16 +53,16 @@
         },
         {
             "name": "loganmarchione/homelab-svg-assets",
-            "version": "0.4.14",
+            "version": "0.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/loganmarchione/homelab-svg-assets.git",
-                "reference": "8c19e3e7ad726904a4f1d75e314562f333f744b8"
+                "reference": "841dae93011e31dbd9ca0ec94bf723de355c37dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/8c19e3e7ad726904a4f1d75e314562f333f744b8",
-                "reference": "8c19e3e7ad726904a4f1d75e314562f333f744b8",
+                "url": "https://api.github.com/repos/loganmarchione/homelab-svg-assets/zipball/841dae93011e31dbd9ca0ec94bf723de355c37dc",
+                "reference": "841dae93011e31dbd9ca0ec94bf723de355c37dc",
                 "shasum": ""
             },
             "type": "library",
@@ -86,20 +86,20 @@
                 "issues": "https://github.com/loganmarchione/homelab-svg-assets/issues",
                 "source": "https://github.com/loganmarchione/homelab-svg-assets"
             },
-            "time": "2025-10-21T02:16:45+00:00"
+            "time": "2025-12-30T20:02:06+00:00"
         },
         {
             "name": "simple-icons/simple-icons",
-            "version": "15.17.0",
+            "version": "16.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simple-icons/simple-icons.git",
-                "reference": "e7147b4d16dff2afc03da439d19b36b96a3668eb"
+                "reference": "f4ba45c82db165a27908628cb08af028d02747d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/e7147b4d16dff2afc03da439d19b36b96a3668eb",
-                "reference": "e7147b4d16dff2afc03da439d19b36b96a3668eb",
+                "url": "https://api.github.com/repos/simple-icons/simple-icons/zipball/f4ba45c82db165a27908628cb08af028d02747d5",
+                "reference": "f4ba45c82db165a27908628cb08af028d02747d5",
                 "shasum": ""
             },
             "type": "library",
@@ -127,7 +127,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2025-10-19T05:26:31+00:00"
+            "time": "2026-01-18T00:49:03+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -446,16 +446,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.21.1",
+            "version": "v3.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "285123877d4dd97dd7c11842ac5fb7e86e60d81d"
+                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/285123877d4dd97dd7c11842ac5fb7e86e60d81d",
-                "reference": "285123877d4dd97dd7c11842ac5fb7e86e60d81d",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
+                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
                 "shasum": ""
             },
             "require": {
@@ -509,7 +509,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.21.1"
+                "source": "https://github.com/twigphp/Twig/tree/v3.23.0"
             },
             "funding": [
                 {
@@ -521,7 +521,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-03T07:21:55+00:00"
+            "time": "2026-01-23T21:00:41+00:00"
         }
     ],
     "packages-dev": [],
@@ -532,5 +532,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
