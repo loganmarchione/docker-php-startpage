@@ -55,11 +55,10 @@ function URL_check(string $url): string {
     }
 
     // Get the headers and 3-digit status code
-    $headers = get_headers($url);
+    $headers = @get_headers($url);
 
     // If headers are false or the array is empty
-    $headers = @get_headers($url);
-    if (!$headers || !isset($headers[0])) {
+    if (!$headers || count($headers) === 0) {
         return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="php-error"><i class="fas fa-circle-xmark"></i></span>';
     }
 
