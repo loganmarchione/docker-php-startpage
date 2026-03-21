@@ -58,7 +58,7 @@ function URL_check(string $url): string {
     $headers = @get_headers($url);
 
     // If headers are false or the array is empty
-    if (!$headers || count($headers) === 0) {
+    if (!$headers) {
         return '<span class="glyph-offline" data-bs-toggle="tooltip" data-bs-title="php-error"><i class="fas fa-circle-xmark"></i></span>';
     }
 
